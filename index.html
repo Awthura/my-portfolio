@@ -13,17 +13,30 @@
 		.card {
 			display: flex;
 			flex-direction: column;
-			height: 100%;
+			height: 650px; /* Fixed height for all cards */
+			width: 100%;
+		}
+		
+		.card-img-top {
+			width: 100%;
+			height: 250px; /* Fixed height for images */
+			object-fit: cover; /* Maintain aspect ratio while filling the space */
 		}
 		
 		.card-body {
 			display: flex;
 			flex-direction: column;
 			flex: 1;
+			overflow: hidden; /* Prevent content from breaking layout */
+		}
+		
+		.card-title {
+			min-height: 60px; /* Reserve space for title */
 		}
 		
 		.card-text {
 			flex: 1;
+			overflow-y: auto; /* Add scroll if text is too long */
 		}
 		
 		.button-container {
@@ -75,7 +88,7 @@
 	<h2 id="projects">Projects</h2>
 	<div class="card-deck">
 		<div class="card">
-			<img class="card-img-top" src="SAI_home.jpg" style= "width: 400px; height: auto;" alt="Project 4">
+			<img class="card-img-top" src="SAI_home.jpg" alt="Project 4">
 			<div class="card-body">
 				<h5 class="card-title">Software Agile Project Manager/Team Leader for a web-dev team of 11 students</h5>
 				<p class="card-text">This is a University project for Software Engineering module at THD. I worked as a team leader and led a team of 11 students to develop a website that displays & filters cooking recipes from a database. Pipeline used was Springboot for backend, Vue for Frontend & MongoDb for dataase (Springboot + MongoDb + Vue) & dockerized. The android part for this project is unfinished and still in mid-development stage. I mainly worked on backend team for this project. The repo in the link provided is a reupload version of the original that we hosted on Gitlab.</p>
@@ -85,7 +98,7 @@
 			</div>
 		</div>
 		<div class="card">
-			<img class="card-img-top" src="Paper_snippet.jpg" style= "width: 335px; height: auto;" alt="Project 2">
+			<img class="card-img-top" src="Paper_snippet.jpg" alt="Project 2">
 			<div class="card-body">
 				<h5 class="card-title">Machine Learning Model to predict Chess ELO</h5>
 				<p class="card-text">This is done as a part of ML module at THD. We researched on how to create an ELO-guessing model based on a chess games database. We came up with several equations to extract features. The report is written using LaTex. This thumbnail is a snippet of our report</p>
@@ -95,7 +108,7 @@
 			</div>
 		</div>
 		<div class="card">
-			<img class="card-img-top" src="Detection.jpeg" style= "width: 440px; height: auto;" alt="Project 6">
+			<img class="card-img-top" src="Detection.jpeg" alt="Project 6">
 			<div class="card-body">
 				<h5 class="card-title">Chess-Piece Detection with YOLO</h5>
 				<p class="card-text">This is a project from Computer Vision module at THD. We implemented YOLOv8 to localize and classify chess pieces. This model can detect chess pieces. The detected class is displayed alongside the confidence level on the label. This project could be run on a video stream & also webcam compatible. </p>
@@ -110,7 +123,7 @@
 <div class="container-fluid" style="padding-top: 70px; padding-bottom: 70px;">
 	<div class="card-deck">
 		<div class="card">
-			<img class="card-img-top" src="Brain_Tumor_app.jpg" style= "width: 370px; height: auto;" alt="Project 1">
+			<img class="card-img-top" src="Brain_Tumor_app.jpg" alt="Project 1">
 			<div class="card-body">
 				<h5 class="card-title">Brain Tumor Classifier</h5>
 				<p class="card-text">This project uses Machine Learning to classify brain Tumors on a specific dataset that provides necessary features for the model. The model is trained on a reliable dataset from kaggle. The UI provides sliders to adjust the features and the possiblity of a tumor given the adjusted values. The image from the dataset that has the closet values for the adjusted features is displayed on the UI. Necessary stats and metrics are also provided.</p>
@@ -120,7 +133,7 @@
 			</div>
 		</div>
 		<div class="card">
-			<img class="card-img-top" src="Hackathon.png" style= "width: 370px; height: auto;" alt="Project 5">
+			<img class="card-img-top" src="Hackathon.png" alt="Project 5">
 			<div class="card-body">
 				<h5 class="card-title">ASEAN-INDIA Hackathon (Winning Project)</h5>
 				<p class="card-text">Me and five other students formed a team and won ASEAN-INDIA International Hackathon 2021. This is an overview of our project from the Hackathon. We provided a small scale solution package for local fishermen. My tasks on this Hackathon are the data analysis and visualization parts, as well as dealing with ArcGIS to provide end users with interactive maps.</p>
@@ -130,7 +143,7 @@
 			</div>
 		</div>
 		<div class="card">
-			<img class="card-img-top" src="Rasa_Chatbot.jpg" style= "width: 300px; height: auto;" alt="Project 3">
+			<img class="card-img-top" src="Rasa_Chatbot.jpg" alt="Project 3">
 			<div class="card-body">
 				<h5 class="card-title">Library Assistant Chatbot</h5>
 				<p class="card-text">Günther is a chat bot designed to help with the process of finding a book from the library database of our University. This chatbot can browse through the books, suggest recommendations and provide information on the books.</p>
@@ -145,7 +158,7 @@
 <div class="container-fluid" style="padding-top: 70px; padding-bottom: 70px;">
 	<div class="card-deck">
 		<div class="card">
-			<img class="card-img-top" src="YOLO_trishaw.png" style= "width: 370px; height: auto;" alt="Project 4">
+			<img class="card-img-top" src="YOLO_trishaw.png" alt="Project 4">
 			<div class="card-body">
 				<h5 class="card-title">Custom Object Detection with YOLO</h5>
 				<p class="card-text">This is a project that I did back in 2019 & early 2020 for my final year thesis at Yangon Technological University. In this project, the pre-existing YOLO object detection model is customized to be able to detect local traffic in Burma, including pedestrians in local costumes, old local buses and unique local vehicles like trishaws. The project is written entirely in .ipynb format as I had to use Google Colab for the GPU requirement for the transfer learning process. </p>
@@ -155,7 +168,7 @@
 			</div>
 		</div>
 		<div class="card">
-			<img class="card-img-top" src="TicTacToe.jpg" style= "width: 335px; height: auto;" alt="Project 2">
+			<img class="card-img-top" src="TicTacToe.jpg" alt="Project 2">
 			<div class="card-body">
 				<h5 class="card-title">TicTacToe with Pygame</h5>
 				<p class="card-text">This project provides a Tic Tac Toe gameplay on a simple user interface. It consists of single player mode against the AI and multiplayer mode on the same UI. The development of an unbeatable AI using minimax algorithm is still a work in progress.</p>
@@ -165,7 +178,7 @@
 			</div>
 		</div>
 		<div class="card">
-			<img class="card-img-top" src="TA_AI_course.jpg" style= "width: 360px; height: auto;" alt="Project 6">
+			<img class="card-img-top" src="TA_AI_course.jpg" alt="Project 6">
 			<div class="card-body">
 				<h5 class="card-title">Teaching Assistant for AI module</h5>
 				<p class="card-text">Back in 2020 December, I helped Professor Dr. Theint Theint Thu as a teaching assistant for her AI module at Yangon Technological University. The course took place entirely online due to COVID-19. There were around 80 students in the online lecture room. My main contributions were on course week three, focusing on YOLO model & unsupervised learning. I have documented lectures for my parts using notebooks and they are also published on the course website.</p>
