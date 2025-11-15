@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chess ELO Prediction - Aw Thura Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style>
+		.project-header {
+			background-color: #f5f5f5;
+			padding: 70px 0;
+		}
+		
+		.project-image {
+			width: 100%;
+			max-width: 800px;
+			height: auto;
+			margin: 30px auto;
+			display: block;
+			border-radius: 8px;
+			box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+		}
+		
+		.project-content {
+			padding: 50px 0;
+		}
+		
+		.tech-badge {
+			display: inline-block;
+			background-color: #007bff;
+			color: white;
+			padding: 5px 15px;
+			margin: 5px;
+			border-radius: 20px;
+			font-size: 14px;
+		}
+		
+		.section-title {
+			margin-top: 40px;
+			margin-bottom: 20px;
+			font-weight: bold;
+			color: #343a40;
+		}
+		
+		.btn-group-custom {
+			margin-top: 30px;
+		}
+		
+		.btn-group-custom .btn {
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	<a class="navbar-brand" href="../portfolio_bilingual_full.html" data-translate="portfolio">My Portfolio</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="../portfolio_bilingual_full.html#about" data-translate="nav_about">About</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="../portfolio_bilingual_full.html#projects" data-translate="nav_projects">Projects</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="../portfolio_bilingual_full.html#contact" data-translate="nav_contact">Contact</a>
+			</li>
+		</ul>
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<button class="btn btn-sm btn-outline-light" id="languageToggle" onclick="toggleLanguage()">
+					<span id="langIcon">🇩🇪 DE</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<div class="project-header">
+	<div class="container">
+		<h1 data-translate="project_title">Machine Learning Model to Predict Chess ELO</h1>
+		<p class="lead" data-translate="project_subtitle">Machine Learning | Research | Feature Engineering</p>
+	</div>
+</div>
+
+<div class="container project-content">
+	<div class="row">
+		<div class="col-lg-8 mx-auto">
+			<img src="../Paper_snippet.jpg" alt="Chess ELO Research Paper" class="project-image">
+			
+			<h3 class="section-title" data-translate="overview_title">Project Overview</h3>
+			<p data-translate="overview_text">
+				This research project was completed as part of the Machine Learning module at THD (Technische Hochschule Deggendorf). 
+				Our team investigated how to create an ELO-guessing model based on a comprehensive chess games database. The goal 
+				was to predict player skill levels by analyzing game patterns, move sequences, and strategic decisions.
+			</p>
+			
+			<h3 class="section-title" data-translate="role_title">My Role</h3>
+			<p data-translate="role_text">
+				I worked as part of a research team, contributing to the development of feature extraction equations and the 
+				implementation of machine learning models. My responsibilities included data preprocessing, feature engineering, 
+				model training, and documenting our findings in a comprehensive research paper written in LaTeX.
+			</p>
+			
+			<h3 class="section-title" data-translate="tech_title">Technologies Used</h3>
+			<div>
+				<span class="tech-badge">Python</span>
+				<span class="tech-badge">Scikit-learn</span>
+				<span class="tech-badge">Pandas</span>
+				<span class="tech-badge">NumPy</span>
+				<span class="tech-badge">LaTeX</span>
+				<span class="tech-badge">Jupyter Notebook</span>
+			</div>
+			
+			<h3 class="section-title" data-translate="features_title">Key Features</h3>
+			<ul data-translate="features_list">
+				<li>Custom feature extraction from chess game data</li>
+				<li>Multiple ML algorithms tested and compared</li>
+				<li>Statistical analysis of chess patterns</li>
+				<li>ELO rating prediction based on game characteristics</li>
+				<li>Comprehensive research documentation</li>
+				<li>Performance metrics and model evaluation</li>
+			</ul>
+			
+			<h3 class="section-title" data-translate="challenges_title">Challenges & Learning</h3>
+			<p data-translate="challenges_text">
+				The main challenge was developing meaningful features from raw chess game data that could effectively capture 
+				player skill level. We experimented with various equations to extract patterns such as move quality, tactical 
+				accuracy, and strategic decision-making. This project deepened my understanding of feature engineering, 
+				the importance of domain knowledge in machine learning, and academic research methodology.
+			</p>
+			
+			<div class="btn-group-custom">
+				<a href="https://github.com/Awthura/GuessTheElo/blob/main/Machine_Learning_Paper_final.pdf" target="_blank" class="btn btn-primary btn-lg" data-translate="view_details">
+					View Details on GitHub
+				</a>
+				<a href="../portfolio_bilingual_full.html#projects" class="btn btn-secondary btn-lg" data-translate="back_portfolio">
+					Back to Portfolio
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer font-small blue pt-4 mt-5" style="background-color: #343a40; color: white;">
+	<div class="container-fluid text-center text-md-left">
+		<div class="row">
+			<div class="col-md-6 mt-md-0 mt-3">
+				<h5 data-translate="footer_title">My Data Science & AI Portfolio</h5>
+				<p>© 2023 Aw Thura</p>
+			</div>
+			<div class="col-md-6 mb-md-0 mb-3">
+				<ul class="list-unstyled">
+					<li>
+						<a href="../portfolio_bilingual_full.html#about" data-translate="nav_about">About</a>
+					</li>
+					<li>
+						<a href="../portfolio_bilingual_full.html#projects" data-translate="nav_projects">Projects</a>
+					</li>
+					<li>
+						<a href="../portfolio_bilingual_full.html#contact" data-translate="nav_contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script>
+// Translation object
+const translations = {
+	en: {
+		portfolio: "My Portfolio",
+		nav_about: "About",
+		nav_projects: "Projects",
+		nav_contact: "Contact",
+		footer_title: "My Data Science & AI Portfolio",
+		
+		project_title: "Machine Learning Model to Predict Chess ELO",
+		project_subtitle: "Machine Learning | Research | Feature Engineering",
+		
+		overview_title: "Project Overview",
+		overview_text: "This research project was completed as part of the Machine Learning module at THD (Technische Hochschule Deggendorf). Our team investigated how to create an ELO-guessing model based on a comprehensive chess games database. The goal was to predict player skill levels by analyzing game patterns, move sequences, and strategic decisions.",
+		
+		role_title: "My Role",
+		role_text: "I worked as part of a research team, contributing to the development of feature extraction equations and the implementation of machine learning models. My responsibilities included data preprocessing, feature engineering, model training, and documenting our findings in a comprehensive research paper written in LaTeX.",
+		
+		tech_title: "Technologies Used",
+		
+		features_title: "Key Features",
+		features_list: "Custom feature extraction from chess game data\nMultiple ML algorithms tested and compared\nStatistical analysis of chess patterns\nELO rating prediction based on game characteristics\nComprehensive research documentation\nPerformance metrics and model evaluation",
+		
+		challenges_title: "Challenges & Learning",
+		challenges_text: "The main challenge was developing meaningful features from raw chess game data that could effectively capture player skill level. We experimented with various equations to extract patterns such as move quality, tactical accuracy, and strategic decision-making. This project deepened my understanding of feature engineering, the importance of domain knowledge in machine learning, and academic research methodology.",
+		
+		view_details: "View Details on GitHub",
+		back_portfolio: "Back to Portfolio"
+	},
+	de: {
+		portfolio: "Mein Portfolio",
+		nav_about: "Über mich",
+		nav_projects: "Projekte",
+		nav_contact: "Kontakt",
+		footer_title: "Mein Data Science & KI Portfolio",
+		
+		project_title: "Machine Learning Modell zur Vorhersage der Schach-ELO",
+		project_subtitle: "Machine Learning | Forschung | Feature Engineering",
+		
+		overview_title: "Projektübersicht",
+		overview_text: "Dieses Forschungsprojekt wurde als Teil des Machine Learning Moduls an der THD (Technische Hochschule Deggendorf) abgeschlossen. Unser Team untersuchte, wie man ein ELO-Vorhersagemodell basierend auf einer umfassenden Schachspieldatenbank erstellt. Das Ziel war es, das Spielerniveau durch Analyse von Spielmustern, Zugsequenzen und strategischen Entscheidungen vorherzusagen.",
+		
+		role_title: "Meine Rolle",
+		role_text: "Ich arbeitete als Teil eines Forschungsteams und trug zur Entwicklung von Feature-Extraktionsgleichungen und zur Implementierung von Machine-Learning-Modellen bei. Meine Verantwortlichkeiten umfassten Datenvorverarbeitung, Feature Engineering, Modelltraining und die Dokumentation unserer Ergebnisse in einer umfassenden Forschungsarbeit, die in LaTeX verfasst wurde.",
+		
+		tech_title: "Verwendete Technologien",
+		
+		features_title: "Hauptmerkmale",
+		features_list: "Benutzerdefinierte Feature-Extraktion aus Schachspieldaten\nMehrere ML-Algorithmen getestet und verglichen\nStatistische Analyse von Schachmustern\nELO-Rating-Vorhersage basierend auf Spielmerkmalen\nUmfassende Forschungsdokumentation\nLeistungsmetriken und Modellbewertung",
+		
+		challenges_title: "Herausforderungen & Lernen",
+		challenges_text: "Die Hauptherausforderung bestand darin, aussagekräftige Features aus rohen Schachspieldaten zu entwickeln, die das Spielerniveau effektiv erfassen können. Wir experimentierten mit verschiedenen Gleichungen, um Muster wie Zugqualität, taktische Genauigkeit und strategische Entscheidungsfindung zu extrahieren. Dieses Projekt vertiefte mein Verständnis für Feature Engineering, die Bedeutung von Domänenwissen im maschinellen Lernen und akademische Forschungsmethodik.",
+		
+		view_details: "Details auf GitHub ansehen",
+		back_portfolio: "Zurück zum Portfolio"
+	}
+};
+
+// Get current language from localStorage or default to 'en'
+let currentLang = localStorage.getItem('preferredLanguage') || 'en';
+
+// Function to update all translatable elements
+function updateLanguage(lang) {
+	const elements = document.querySelectorAll('[data-translate]');
+	elements.forEach(element => {
+		const key = element.getAttribute('data-translate');
+		if (translations[lang][key]) {
+			if (key === 'features_list') {
+				const items = translations[lang][key].split('\n');
+				element.innerHTML = items.map(item => `<li>${item}</li>`).join('');
+			} else {
+				element.textContent = translations[lang][key];
+			}
+		}
+	});
+	
+	const langIcon = document.getElementById('langIcon');
+	if (lang === 'en') {
+		langIcon.textContent = '🇩🇪 DE';
+	} else {
+		langIcon.textContent = '🇬🇧 EN';
+	}
+	
+	localStorage.setItem('preferredLanguage', lang);
+	currentLang = lang;
+}
+
+function toggleLanguage() {
+	const newLang = currentLang === 'en' ? 'de' : 'en';
+	updateLanguage(newLang);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+	updateLanguage(currentLang);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head><title>TicTacToe - Aw Thura</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>.project-header{background-color:#f5f5f5;padding:70px 0}.project-image{width:100%;max-width:800px;height:auto;margin:30px auto;display:block;border-radius:8px;box-shadow:0 4px 6px rgba(0,0,0,0.1)}.project-content{padding:50px 0}.tech-badge{display:inline-block;background-color:#007bff;color:white;padding:5px 15px;margin:5px;border-radius:20px;font-size:14px}.section-title{margin-top:40px;margin-bottom:20px;font-weight:bold;color:#343a40}.btn-group-custom{margin-top:30px}.btn-group-custom .btn{margin:5px}</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<a class="navbar-brand" href="../portfolio_bilingual_full.html" data-translate="portfolio">My Portfolio</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="collapsibleNavbar"><ul class="navbar-nav">
+<li class="nav-item"><a class="nav-link" href="../portfolio_bilingual_full.html#about" data-translate="nav_about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="../portfolio_bilingual_full.html#projects" data-translate="nav_projects">Projects</a></li>
+<li class="nav-item"><a class="nav-link" href="../portfolio_bilingual_full.html#contact" data-translate="nav_contact">Contact</a></li>
+</ul><ul class="navbar-nav ml-auto"><li class="nav-item"><button class="btn btn-sm btn-outline-light" id="languageToggle" onclick="toggleLanguage()"><span id="langIcon">🇩🇪 DE</span></button></li></ul></div>
+</nav>
+<div class="project-header"><div class="container">
+<h1 data-translate="project_title">TicTacToe with Pygame</h1>
+<p class="lead" data-translate="project_subtitle">Game Development | AI Algorithms | Python</p>
+</div></div>
+<div class="container project-content"><div class="row"><div class="col-lg-8 mx-auto">
+<img src="../TicTacToe.jpg" alt="TicTacToe" class="project-image">
+<h3 class="section-title" data-translate="overview_title">Project Overview</h3>
+<p data-translate="overview_text">A Tic Tac Toe game built with Pygame featuring both single-player mode against AI and local multiplayer mode. The project includes work towards developing an unbeatable AI using the minimax algorithm.</p>
+<h3 class="section-title" data-translate="role_title">My Role</h3>
+<p data-translate="role_text">I developed the complete game including the UI, game logic, AI implementation, and multiplayer functionality using Pygame framework.</p>
+<h3 class="section-title" data-translate="tech_title">Technologies Used</h3>
+<div><span class="tech-badge">Python</span><span class="tech-badge">Pygame</span><span class="tech-badge">Minimax Algorithm</span><span class="tech-badge">Game Development</span></div>
+<h3 class="section-title" data-translate="features_title">Key Features</h3>
+<ul data-translate="features_list"><li>Single player vs AI mode</li><li>Local multiplayer mode</li><li>Simple user interface</li><li>Minimax algorithm (in development)</li></ul>
+<div class="btn-group-custom">
+<a href="https://github.com/Awthura/TicTacToe_THD" target="_blank" class="btn btn-primary btn-lg" data-translate="view_details">View Details on GitHub</a>
+<a href="../portfolio_bilingual_full.html#projects" class="btn btn-secondary btn-lg" data-translate="back_portfolio">Back to Portfolio</a>
+</div></div></div></div>
+<footer class="page-footer font-small blue pt-4 mt-5" style="background-color:#343a40;color:white">
+<div class="container-fluid text-center text-md-left"><div class="row">
+<div class="col-md-6 mt-md-0 mt-3"><h5 data-translate="footer_title">My Data Science & AI Portfolio</h5><p>© 2023 Aw Thura</p></div>
+<div class="col-md-6 mb-md-0 mb-3"><ul class="list-unstyled">
+<li><a href="../portfolio_bilingual_full.html#about" data-translate="nav_about">About</a></li>
+<li><a href="../portfolio_bilingual_full.html#projects" data-translate="nav_projects">Projects</a></li>
+<li><a href="../portfolio_bilingual_full.html#contact" data-translate="nav_contact">Contact</a></li>
+</ul></div></div></div>
+</footer>
+<script>
+const translations={en:{portfolio:"My Portfolio",nav_about:"About",nav_projects:"Projects",nav_contact:"Contact",footer_title:"My Data Science & AI Portfolio",project_title:"TicTacToe with Pygame",project_subtitle:"Game Development | AI Algorithms | Python",overview_title:"Project Overview",overview_text:"A Tic Tac Toe game with Pygame featuring single-player AI mode and local multiplayer, with minimax algorithm development in progress.",role_title:"My Role",role_text:"I developed the complete game including UI, logic, AI implementation, and multiplayer functionality.",tech_title:"Technologies Used",features_title:"Key Features",features_list:"Single player vs AI mode\nLocal multiplayer mode\nSimple user interface\nMinimax algorithm (in development)",view_details:"View Details on GitHub",back_portfolio:"Back to Portfolio"},de:{portfolio:"Mein Portfolio",nav_about:"Über mich",nav_projects:"Projekte",nav_contact:"Kontakt",footer_title:"Mein Data Science & KI Portfolio",project_title:"TicTacToe mit Pygame",project_subtitle:"Spieleentwicklung | KI-Algorithmen | Python",overview_title:"Projektübersicht",overview_text:"Ein Tic Tac Toe Spiel mit Pygame mit Einzelspieler-KI-Modus und lokalem Mehrspielermodus, Minimax-Algorithmus in Entwicklung.",role_title:"Meine Rolle",role_text:"Ich entwickelte das komplette Spiel einschließlich UI, Logik, KI-Implementierung und Mehrspielerfunktionalität.",tech_title:"Verwendete Technologien",features_title:"Hauptmerkmale",features_list:"Einzelspieler vs KI-Modus\nLokaler Mehrspielermodus\nEinfache Benutzeroberfläche\nMinimax-Algorithmus (in Entwicklung)",view_details:"Details auf GitHub ansehen",back_portfolio:"Zurück zum Portfolio"}};
+let currentLang=localStorage.getItem('preferredLanguage')||'en';
+function updateLanguage(lang){document.querySelectorAll('[data-translate]').forEach(el=>{const key=el.getAttribute('data-translate');if(translations[lang][key]){if(key==='features_list'){el.innerHTML=translations[lang][key].split('\n').map(i=>`<li>${i}</li>`).join('');}else{el.textContent=translations[lang][key];}}});document.getElementById('langIcon').textContent=lang==='en'?'🇩🇪 DE':'🇬🇧 EN';localStorage.setItem('preferredLanguage',lang);currentLang=lang;}
+function toggleLanguage(){updateLanguage(currentLang==='en'?'de':'en');}
+document.addEventListener('DOMContentLoaded',()=>updateLanguage(currentLang));
+</script>
+</body></html>

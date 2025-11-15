@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cooking Recipes Website - Aw Thura Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style>
+		.project-header {
+			background-color: #f5f5f5;
+			padding: 70px 0;
+		}
+		
+		.project-image {
+			width: 100%;
+			max-width: 800px;
+			height: auto;
+			margin: 30px auto;
+			display: block;
+			border-radius: 8px;
+			box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+		}
+		
+		.project-content {
+			padding: 50px 0;
+		}
+		
+		.tech-badge {
+			display: inline-block;
+			background-color: #007bff;
+			color: white;
+			padding: 5px 15px;
+			margin: 5px;
+			border-radius: 20px;
+			font-size: 14px;
+		}
+		
+		.section-title {
+			margin-top: 40px;
+			margin-bottom: 20px;
+			font-weight: bold;
+			color: #343a40;
+		}
+		
+		.btn-group-custom {
+			margin-top: 30px;
+		}
+		
+		.btn-group-custom .btn {
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	<a class="navbar-brand" href="../portfolio_bilingual_full.html" data-translate="portfolio">My Portfolio</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="../portfolio_bilingual_full.html#about" data-translate="nav_about">About</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="../portfolio_bilingual_full.html#projects" data-translate="nav_projects">Projects</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="../portfolio_bilingual_full.html#contact" data-translate="nav_contact">Contact</a>
+			</li>
+		</ul>
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<button class="btn btn-sm btn-outline-light" id="languageToggle" onclick="toggleLanguage()">
+					<span id="langIcon">🇩🇪 DE</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<div class="project-header">
+	<div class="container">
+		<h1 data-translate="project_title">Cooking Recipes Website - Team Leadership Project</h1>
+		<p class="lead" data-translate="project_subtitle">Software Engineering | Web Development | Team Management</p>
+	</div>
+</div>
+
+<div class="container project-content">
+	<div class="row">
+		<div class="col-lg-8 mx-auto">
+			<img src="../SAI_home.jpg" alt="Cooking Recipes Website" class="project-image">
+			
+			<h3 class="section-title" data-translate="overview_title">Project Overview</h3>
+			<p data-translate="overview_text">
+				This is a University project for the Software Engineering module at THD (Technische Hochschule Deggendorf). 
+				I worked as a team leader and Agile Project Manager, leading a team of 11 students to develop a comprehensive 
+				web application that displays and filters cooking recipes from a database. The project showcased modern 
+				web development practices, team collaboration, and agile methodologies.
+			</p>
+			
+			<h3 class="section-title" data-translate="role_title">My Role</h3>
+			<p data-translate="role_text">
+				As the Software Agile Project Manager and Team Leader, I was responsible for coordinating the development 
+				efforts across frontend, backend, and database teams. I facilitated sprint planning, daily standups, and 
+				retrospectives while also contributing directly to the backend development. My leadership ensured that 
+				all team members stayed aligned with project goals and deadlines.
+			</p>
+			
+			<h3 class="section-title" data-translate="tech_title">Technologies Used</h3>
+			<div>
+				<span class="tech-badge">Spring Boot</span>
+				<span class="tech-badge">Vue.js</span>
+				<span class="tech-badge">MongoDB</span>
+				<span class="tech-badge">Docker</span>
+				<span class="tech-badge">GitLab</span>
+				<span class="tech-badge">REST API</span>
+			</div>
+			
+			<h3 class="section-title" data-translate="features_title">Key Features</h3>
+			<ul data-translate="features_list">
+				<li>Recipe browsing and filtering system</li>
+				<li>Database-driven content management</li>
+				<li>Responsive web interface built with Vue.js</li>
+				<li>RESTful API backend with Spring Boot</li>
+				<li>MongoDB for flexible data storage</li>
+				<li>Dockerized deployment for easy setup</li>
+				<li>Android application (in development)</li>
+			</ul>
+			
+			<h3 class="section-title" data-translate="challenges_title">Challenges & Learning</h3>
+			<p data-translate="challenges_text">
+				Leading a team of 11 students presented unique challenges in coordination and communication. I learned 
+				valuable lessons in agile project management, conflict resolution, and technical decision-making. The 
+				project also deepened my understanding of full-stack development and the importance of clear architecture 
+				in team environments.
+			</p>
+			
+			<div class="btn-group-custom">
+				<a href="https://github.com/Awthura/CookingRecipes" target="_blank" class="btn btn-primary btn-lg" data-translate="view_details">
+					View Details on GitHub
+				</a>
+				<a href="../portfolio_bilingual_full.html#projects" class="btn btn-secondary btn-lg" data-translate="back_portfolio">
+					Back to Portfolio
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer font-small blue pt-4 mt-5" style="background-color: #343a40; color: white;">
+	<div class="container-fluid text-center text-md-left">
+		<div class="row">
+			<div class="col-md-6 mt-md-0 mt-3">
+				<h5 data-translate="footer_title">My Data Science & AI Portfolio</h5>
+				<p>© 2023 Aw Thura</p>
+			</div>
+			<div class="col-md-6 mb-md-0 mb-3">
+				<ul class="list-unstyled">
+					<li>
+						<a href="../portfolio_bilingual_full.html#about" data-translate="nav_about">About</a>
+					</li>
+					<li>
+						<a href="../portfolio_bilingual_full.html#projects" data-translate="nav_projects">Projects</a>
+					</li>
+					<li>
+						<a href="../portfolio_bilingual_full.html#contact" data-translate="nav_contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script>
+// Translation object
+const translations = {
+	en: {
+		portfolio: "My Portfolio",
+		nav_about: "About",
+		nav_projects: "Projects",
+		nav_contact: "Contact",
+		footer_title: "My Data Science & AI Portfolio",
+		
+		project_title: "Cooking Recipes Website - Team Leadership Project",
+		project_subtitle: "Software Engineering | Web Development | Team Management",
+		
+		overview_title: "Project Overview",
+		overview_text: "This is a University project for the Software Engineering module at THD (Technische Hochschule Deggendorf). I worked as a team leader and Agile Project Manager, leading a team of 11 students to develop a comprehensive web application that displays and filters cooking recipes from a database. The project showcased modern web development practices, team collaboration, and agile methodologies.",
+		
+		role_title: "My Role",
+		role_text: "As the Software Agile Project Manager and Team Leader, I was responsible for coordinating the development efforts across frontend, backend, and database teams. I facilitated sprint planning, daily standups, and retrospectives while also contributing directly to the backend development. My leadership ensured that all team members stayed aligned with project goals and deadlines.",
+		
+		tech_title: "Technologies Used",
+		
+		features_title: "Key Features",
+		features_list: "Recipe browsing and filtering system\nDatabase-driven content management\nResponsive web interface built with Vue.js\nRESTful API backend with Spring Boot\nMongoDB for flexible data storage\nDockerized deployment for easy setup\nAndroid application (in development)",
+		
+		challenges_title: "Challenges & Learning",
+		challenges_text: "Leading a team of 11 students presented unique challenges in coordination and communication. I learned valuable lessons in agile project management, conflict resolution, and technical decision-making. The project also deepened my understanding of full-stack development and the importance of clear architecture in team environments.",
+		
+		view_details: "View Details on GitHub",
+		back_portfolio: "Back to Portfolio"
+	},
+	de: {
+		portfolio: "Mein Portfolio",
+		nav_about: "Über mich",
+		nav_projects: "Projekte",
+		nav_contact: "Kontakt",
+		footer_title: "Mein Data Science & KI Portfolio",
+		
+		project_title: "Kochrezepte-Website - Teamführungsprojekt",
+		project_subtitle: "Software Engineering | Webentwicklung | Teammanagement",
+		
+		overview_title: "Projektübersicht",
+		overview_text: "Dies ist ein Universitätsprojekt für das Software Engineering Modul an der THD (Technische Hochschule Deggendorf). Ich arbeitete als Teamleiter und Agile Projektmanager und leitete ein Team von 11 Studenten bei der Entwicklung einer umfassenden Webanwendung, die Kochrezepte aus einer Datenbank anzeigt und filtert. Das Projekt demonstrierte moderne Webentwicklungspraktiken, Teamzusammenarbeit und agile Methoden.",
+		
+		role_title: "Meine Rolle",
+		role_text: "Als Software Agile Projektmanager und Teamleiter war ich für die Koordinierung der Entwicklungsarbeit über Frontend-, Backend- und Datenbankteams hinweg verantwortlich. Ich moderierte Sprint-Planungen, tägliche Standups und Retrospektiven, während ich auch direkt zur Backend-Entwicklung beitrug. Meine Führung stellte sicher, dass alle Teammitglieder mit den Projektzielen und Fristen abgestimmt blieben.",
+		
+		tech_title: "Verwendete Technologien",
+		
+		features_title: "Hauptmerkmale",
+		features_list: "Rezept-Browsing und Filtersystem\nDatenbankgesteuerte Inhaltsverwaltung\nResponsive Weboberfläche mit Vue.js\nRESTful API Backend mit Spring Boot\nMongoDB für flexible Datenspeicherung\nDockerisierte Bereitstellung für einfaches Setup\nAndroid-Anwendung (in Entwicklung)",
+		
+		challenges_title: "Herausforderungen & Lernen",
+		challenges_text: "Die Leitung eines Teams von 11 Studenten stellte einzigartige Herausforderungen in Bezug auf Koordination und Kommunikation dar. Ich lernte wertvolle Lektionen im agilen Projektmanagement, in der Konfliktlösung und bei technischen Entscheidungen. Das Projekt vertiefte auch mein Verständnis für Full-Stack-Entwicklung und die Bedeutung klarer Architektur in Teamumgebungen.",
+		
+		view_details: "Details auf GitHub ansehen",
+		back_portfolio: "Zurück zum Portfolio"
+	}
+};
+
+// Get current language from localStorage or default to 'en'
+let currentLang = localStorage.getItem('preferredLanguage') || 'en';
+
+// Function to update all translatable elements
+function updateLanguage(lang) {
+	const elements = document.querySelectorAll('[data-translate]');
+	elements.forEach(element => {
+		const key = element.getAttribute('data-translate');
+		if (translations[lang][key]) {
+			// For lists, handle specially
+			if (key === 'features_list') {
+				const items = translations[lang][key].split('\n');
+				element.innerHTML = items.map(item => `<li>${item}</li>`).join('');
+			} else {
+				element.textContent = translations[lang][key];
+			}
+		}
+	});
+	
+	// Update language button
+	const langIcon = document.getElementById('langIcon');
+	if (lang === 'en') {
+		langIcon.textContent = '🇩🇪 DE';
+	} else {
+		langIcon.textContent = '🇬🇧 EN';
+	}
+	
+	// Save preference
+	localStorage.setItem('preferredLanguage', lang);
+	currentLang = lang;
+}
+
+// Toggle language function
+function toggleLanguage() {
+	const newLang = currentLang === 'en' ? 'de' : 'en';
+	updateLanguage(newLang);
+}
+
+// Initialize with saved or default language on page load
+document.addEventListener('DOMContentLoaded', function() {
+	updateLanguage(currentLang);
+});
+</script>
+</body>
+</html>
