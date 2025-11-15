@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Digital Twin System Deployment - Aw Thura Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style>
+		.project-header { background-color: #f5f5f5; padding: 70px 0; }
+		.project-image { width: 100%; max-width: 800px; height: auto; margin: 30px auto; display: block; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+		.project-content { padding: 50px 0; }
+		.tech-badge { display: inline-block; background-color: #007bff; color: white; padding: 5px 15px; margin: 5px; border-radius: 20px; font-size: 14px; }
+		.section-title { margin-top: 40px; margin-bottom: 20px; font-weight: bold; color: #343a40; }
+		.btn-group-custom { margin-top: 30px; }
+		.btn-group-custom .btn { margin: 5px; }
+		.highlight-box { background-color: #e8f4f8; border-left: 4px solid #007bff; padding: 15px; margin: 20px 0; border-radius: 4px; }
+	</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	<a class="navbar-brand" href="../index.html" data-translate="portfolio">My Portfolio</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"><span class="navbar-toggler-icon"></span></button>
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link" href="../index.html#about" data-translate="nav_about">About</a></li>
+			<li class="nav-item"><a class="nav-link" href="../index.html#projects" data-translate="nav_projects">Projects</a></li>
+			<li class="nav-item"><a class="nav-link" href="../index.html#contact" data-translate="nav_contact">Contact</a></li>
+		</ul>
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item"><button class="btn btn-sm btn-outline-light" id="languageToggle" onclick="toggleLanguage()"><span id="langIcon">🇩🇪 DE</span></button></li>
+		</ul>
+	</div>
+</nav>
+
+<div class="project-header">
+	<div class="container">
+		<h1 data-translate="project_title">Enterprise Digital Twin System Deployment</h1>
+		<p class="lead" data-translate="project_subtitle">Production AI Systems | Computer Vision | Large-Scale Deployment | Sentics GmbH</p>
+	</div>
+</div>
+
+<div class="container project-content">
+	<div class="row">
+		<div class="col-lg-8 mx-auto">
+			<img src="../digital_twin_sentics.jpg" alt="Digital Twin System" class="project-image">
+			
+			<div class="highlight-box">
+				<strong data-translate="role_badge">Current Role:</strong>
+				<span data-translate="role_text">AI/ML/Deployment/Software Engineer at Sentics GmbH</span>
+			</div>
+			
+			<h3 class="section-title" data-translate="overview_title">Project Overview</h3>
+			<p data-translate="overview_text">
+				As an AI/ML/Deployment Engineer at Sentics GmbH, I am responsible for the end-to-end deployment of enterprise-grade digital twin systems at customer sites. These systems utilize large-scale camera networks (8-160 cameras) for real-time spatial intelligence and computer vision applications. I handle the complete deployment lifecycle from camera calibration to production monitoring, ensuring reliable operation of mission-critical AI systems in industrial and commercial environments.
+			</p>
+			
+			<h3 class="section-title" data-translate="responsibilities_title">Key Responsibilities</h3>
+			<ul data-translate="responsibilities_list">
+				<li>End-to-end deployment of digital twin systems at customer sites across various industries</li>
+				<li>Camera network setup: orienting and calibrating 8-160 cameras per installation</li>
+				<li>Manual calculation and optimization of camera extrinsics for accurate 3D spatial mapping</li>
+				<li>Configuration management: creating and maintaining config files for cameras, servers, and DeepStream pipelines</li>
+				<li>AI model lifecycle management: data collection, model training, and deployment</li>
+				<li>Complete software stack implementation: RTSP stream processing to Kafka messaging</li>
+				<li>System integration with advanced data fusion systems</li>
+				<li>Production monitoring and maintenance: ensuring 24/7 system uptime</li>
+				<li>Rapid troubleshooting and system recovery when issues arise</li>
+			</ul>
+			
+			<h3 class="section-title" data-translate="tech_title">Technology Stack</h3>
+			<div>
+				<span class="tech-badge">Computer Vision</span>
+				<span class="tech-badge">NVIDIA DeepStream</span>
+				<span class="tech-badge">Camera Calibration</span>
+				<span class="tech-badge">RTSP Streaming</span>
+				<span class="tech-badge">Apache Kafka</span>
+				<span class="tech-badge">AI/ML Models</span>
+				<span class="tech-badge">Linux</span>
+				<span class="tech-badge">Network Configuration</span>
+				<span class="tech-badge">Production Deployment</span>
+				<span class="tech-badge">System Monitoring</span>
+			</div>
+			
+			<h3 class="section-title" data-translate="technical_title">Technical Highlights</h3>
+			<ul data-translate="technical_list">
+				<li>Large-scale camera networks: Successfully deployed systems with up to 160 cameras</li>
+				<li>Precision calibration: Manual calculation of camera extrinsics for millimeter-accurate 3D positioning</li>
+				<li>Real-time processing: Handling multiple RTSP streams with low-latency AI inference</li>
+				<li>Production-grade reliability: Maintaining 24/7 uptime for mission-critical systems</li>
+				<li>Scalable architecture: DeepStream pipelines optimized for edge deployment</li>
+				<li>Data pipeline: End-to-end flow from video streams to actionable insights via Kafka</li>
+			</ul>
+			
+			<h3 class="section-title" data-translate="impact_title">Impact & Scale</h3>
+			<p data-translate="impact_text">
+				These digital twin systems provide real-time spatial intelligence for enterprise clients, enabling applications such as occupancy monitoring, safety compliance, workflow optimization, and automated analytics. The deployments serve multiple industries with varying requirements, demonstrating the versatility and robustness of the solution. My work ensures that complex AI systems transition smoothly from development to production, delivering reliable value to customers in demanding real-world environments.
+			</p>
+			
+			<h3 class="section-title" data-translate="skills_title">Skills Demonstrated</h3>
+			<ul data-translate="skills_list">
+				<li>Production AI system deployment at enterprise scale</li>
+				<li>Computer vision and camera calibration expertise</li>
+				<li>Full-stack AI/ML engineering: from data to deployment</li>
+				<li>System architecture and integration</li>
+				<li>Real-time video processing and streaming</li>
+				<li>Configuration management and DevOps practices</li>
+				<li>Client-facing technical delivery</li>
+				<li>Problem-solving under pressure in production environments</li>
+			</ul>
+			
+			<div class="btn-group-custom">
+				<a href="https://sentics.de/en/computer-vision/#tabs" target="_blank" class="btn btn-primary btn-lg" data-translate="view_company">Learn More at Sentics</a>
+				<a href="../index.html#projects" class="btn btn-secondary btn-lg" data-translate="back_portfolio">Back to Portfolio</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer font-small blue pt-4 mt-5" style="background-color:#343a40;color:white">
+	<div class="container-fluid text-center text-md-left">
+		<div class="row">
+			<div class="col-md-6 mt-md-0 mt-3"><h5 data-translate="footer_title">My Data Science & AI Portfolio</h5><p>© 2023 Aw Thura</p></div>
+			<div class="col-md-6 mb-md-0 mb-3">
+				<ul class="list-unstyled">
+					<li><a href="../index.html#about" data-translate="nav_about">About</a></li>
+					<li><a href="../index.html#projects" data-translate="nav_projects">Projects</a></li>
+					<li><a href="../index.html#contact" data-translate="nav_contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script>
+const translations = {
+	en: {
+		portfolio: "My Portfolio", nav_about: "About", nav_projects: "Projects", nav_contact: "Contact",
+		footer_title: "My Data Science & AI Portfolio",
+		project_title: "Enterprise Digital Twin System Deployment",
+		project_subtitle: "Production AI Systems | Computer Vision | Large-Scale Deployment | Sentics GmbH",
+		role_badge: "Current Role:",
+		role_text: "AI/ML/Deployment/Software Engineer at Sentics GmbH",
+		overview_title: "Project Overview",
+		overview_text: "As an AI/ML/Deployment Engineer at Sentics GmbH, I am responsible for the end-to-end deployment of enterprise-grade digital twin systems at customer sites. These systems utilize large-scale camera networks (8-160 cameras) for real-time spatial intelligence and computer vision applications. I handle the complete deployment lifecycle from camera calibration to production monitoring.",
+		responsibilities_title: "Key Responsibilities",
+		responsibilities_list: "End-to-end deployment of digital twin systems at customer sites\nCamera network setup: 8-160 cameras per installation\nManual calculation of camera extrinsics for accurate 3D mapping\nConfiguration management for cameras, servers, and DeepStream pipelines\nAI model lifecycle: data collection, training, and deployment\nSoftware stack: RTSP stream processing to Kafka messaging\nSystem integration with data fusion systems\nProduction monitoring and 24/7 system uptime\nRapid troubleshooting and system recovery",
+		tech_title: "Technology Stack",
+		technical_title: "Technical Highlights",
+		technical_list: "Large-scale camera networks: up to 160 cameras\nPrecision calibration: manual camera extrinsics calculation\nReal-time processing: multiple RTSP streams with low-latency AI inference\nProduction-grade reliability: 24/7 uptime maintenance\nScalable DeepStream pipelines for edge deployment\nEnd-to-end data pipeline from video to Kafka insights",
+		impact_title: "Impact & Scale",
+		impact_text: "These digital twin systems provide real-time spatial intelligence for enterprise clients, enabling occupancy monitoring, safety compliance, workflow optimization, and automated analytics. The deployments serve multiple industries, demonstrating solution versatility and robustness. My work ensures smooth transition of complex AI systems from development to production.",
+		skills_title: "Skills Demonstrated",
+		skills_list: "Production AI system deployment at enterprise scale\nComputer vision and camera calibration expertise\nFull-stack AI/ML engineering: data to deployment\nSystem architecture and integration\nReal-time video processing and streaming\nConfiguration management and DevOps\nClient-facing technical delivery\nProduction environment problem-solving",
+		view_company: "Learn More at Sentics",
+		back_portfolio: "Back to Portfolio"
+	},
+	de: {
+		portfolio: "Mein Portfolio", nav_about: "Über mich", nav_projects: "Projekte", nav_contact: "Kontakt",
+		footer_title: "Mein Data Science & KI Portfolio",
+		project_title: "Unternehmens-Digital-Twin-System-Bereitstellung",
+		project_subtitle: "Produktions-KI-Systeme | Computer Vision | Großskalige Bereitstellung | Sentics GmbH",
+		role_badge: "Aktuelle Position:",
+		role_text: "KI/ML/Deployment/Software-Ingenieur bei Sentics GmbH",
+		overview_title: "Projektübersicht",
+		overview_text: "Als KI/ML/Deployment-Ingenieur bei Sentics GmbH bin ich für die End-to-End-Bereitstellung von unternehmensweiten Digital-Twin-Systemen an Kundenstandorten verantwortlich. Diese Systeme nutzen großskalige Kameranetzwerke (8-160 Kameras) für räumliche Echtzeitintelligenz und Computer-Vision-Anwendungen. Ich übernehme den kompletten Bereitstellungslebenszyklus von der Kamerakalibrierung bis zur Produktionsüberwachung.",
+		responsibilities_title: "Hauptverantwortlichkeiten",
+		responsibilities_list: "End-to-End-Bereitstellung von Digital-Twin-Systemen an Kundenstandorten\nKameranetzwerk-Setup: 8-160 Kameras pro Installation\nManuelle Berechnung der Kamera-Extrinsics für präzise 3D-Kartierung\nKonfigurationsmanagement für Kameras, Server und DeepStream-Pipelines\nKI-Modell-Lebenszyklus: Datensammlung, Training und Bereitstellung\nSoftware-Stack: RTSP-Stream-Verarbeitung bis Kafka-Messaging\nSystemintegration mit Datenfusionssystemen\nProduktionsüberwachung und 24/7-Systemverfügbarkeit\nSchnelle Fehlersuche und Systemwiederherstellung",
+		tech_title: "Technologie-Stack",
+		technical_title: "Technische Highlights",
+		technical_list: "Großskalige Kameranetzwerke: bis zu 160 Kameras\nPräzisionskalibrierung: manuelle Kamera-Extrinsics-Berechnung\nEchtzeitverarbeitung: mehrere RTSP-Streams mit Low-Latency-KI-Inferenz\nProduktionsreife Zuverlässigkeit: 24/7-Betriebszeit-Wartung\nSkalierbare DeepStream-Pipelines für Edge-Bereitstellung\nEnd-to-End-Datenpipeline von Video zu Kafka-Insights",
+		impact_title: "Auswirkung & Umfang",
+		impact_text: "Diese Digital-Twin-Systeme bieten Echtzeit-Raumintelligenz für Unternehmenskunden und ermöglichen Belegungsüberwachung, Sicherheitskonformität, Workflow-Optimierung und automatisierte Analysen. Die Bereitstellungen bedienen mehrere Branchen und demonstrieren Lösungsvielseitigkeit und Robustheit. Meine Arbeit gewährleistet den reibungslosen Übergang komplexer KI-Systeme von der Entwicklung zur Produktion.",
+		skills_title: "Demonstrierte Fähigkeiten",
+		skills_list: "Produktions-KI-System-Bereitstellung im Unternehmensmaßstab\nComputer Vision und Kamerakalibrierungs-Expertise\nFull-Stack-KI/ML-Engineering: Daten bis Bereitstellung\nSystemarchitektur und Integration\nEchtzeit-Videoverarbeitung und Streaming\nKonfigurationsmanagement und DevOps\nKundenorientierte technische Lieferung\nProblemlösung in Produktionsumgebungen",
+		view_company: "Mehr erfahren bei Sentics",
+		back_portfolio: "Zurück zum Portfolio"
+	}
+};
+let currentLang = localStorage.getItem('preferredLanguage') || 'en';
+function updateLanguage(lang) {
+	document.querySelectorAll('[data-translate]').forEach(el => {
+		const key = el.getAttribute('data-translate');
+		if (translations[lang][key]) {
+			if (key.includes('_list')) { 
+				el.innerHTML = translations[lang][key].split('\n').map(i => `<li>${i}</li>`).join(''); 
+			} else { el.textContent = translations[lang][key]; }
+		}
+	});
+	document.getElementById('langIcon').textContent = lang === 'en' ? '🇩🇪 DE' : '🇬🇧 EN';
+	localStorage.setItem('preferredLanguage', lang); currentLang = lang;
+}
+function toggleLanguage() { updateLanguage(currentLang === 'en' ? 'de' : 'en'); }
+document.addEventListener('DOMContentLoaded', () => updateLanguage(currentLang));
+</script>
+</body>
+</html>
