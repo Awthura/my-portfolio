@@ -83,7 +83,7 @@
 	<div class="row">
 		<div class="col-md-8 text-md-left">
 			<h2 id="about" data-translate="about_heading">About Me</h2>
-			<p data-translate="about_text">Hi, I am Aw Thura, an AI student based in Bayern, Germany; with a passion for using data to solve complex problems. I can code in Python and have experimented with R, Tableau & PowerBi. I have experience in computer vision, data science, and machine learning tasks. In this portfolio, I will provide you with sample work & projects that reflects my skills.</p>
+			<p data-translate="about_text">Hi, I am Aw Thura, an AI/ML/Deployment Engineer at Sentics GmbH in Bayern, Germany, with a passion for deploying production AI systems that solve complex real-world problems. I specialize in computer vision, machine learning deployment, and enterprise-scale system integration. In this portfolio, I showcase my professional work deploying digital twin systems, vision language models, and large-scale camera networks, alongside academic projects that demonstrate my technical foundation.</p>
 		</div>
 		<div class="col-md-4 text-right">
 			<img src="profile.jpg" alt="Profile Picture" style= "width: 300px; height: auto; padding-right: 80px">
@@ -115,6 +115,21 @@
 			</div>
 		</div>
 		<div class="card">
+			<img class="card-img-top" src="local_vlm.png" alt="Project">
+			<div class="card-body">
+				<h5 class="card-title" data-translate="project13_title">Vision Language Model Deployment at Sentics GmbH</h5>
+				<p class="card-text" data-translate="project13_desc">Deployed Qwen2-VL on company servers with web dashboard for internal access. Integrated VLM into production load documentation pipeline with fixed prompts generating JSON outputs. Coordinated with dashboard team to feed structured data from visual documents into company databases. Technologies: Qwen2-VL, Python, web dashboard, server deployment, prompt engineering, database integration.</p>
+				<div class="button-container text-right">
+					<a href="projects/vlm-deployment.html" class="btn btn-primary" data-translate="view_project">View Project</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid" style="padding-top: 70px; padding-bottom: 70px;">
+	<div class="card-deck">
+		<div class="card">
 			<img class="card-img-top" src="SAI_home.jpg" alt="Project">
 			<div class="card-body">
 				<h5 class="card-title" data-translate="project1_title">Software Agile Project Manager/Team Leader for a web-dev team of 11 students</h5>
@@ -124,11 +139,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-
-<div class="container-fluid" style="padding-top: 70px; padding-bottom: 70px;">
-	<div class="card-deck">
 		<div class="card">
 			<img class="card-img-top" src="flood_force_screenshot.png" alt="Project">
 			<div class="card-body">
@@ -149,6 +159,11 @@
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
+
+<div class="container-fluid" style="padding-top: 70px; padding-bottom: 70px;">
+	<div class="card-deck">
 		<div class="card">
 			<img class="card-img-top" src="Paper_snippet.jpg" alt="Project">
 			<div class="card-body">
@@ -159,11 +174,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-
-<div class="container-fluid" style="padding-top: 70px; padding-bottom: 70px;">
-	<div class="card-deck">
 		<div class="card">
 			<img class="card-img-top" src="YOLO_trishaw.png" alt="Project">
 			<div class="card-body">
@@ -184,6 +194,11 @@
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
+
+<div class="container-fluid" style="padding-top: 70px; padding-bottom: 70px;">
+	<div class="card-deck">
 		<div class="card">
 			<img class="card-img-top" src="Detection.jpeg" alt="Project">
 			<div class="card-body">
@@ -194,11 +209,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-
-<div class="container-fluid" style="padding-top: 70px; padding-bottom: 70px;">
-	<div class="card-deck">
 		<div class="card">
 			<img class="card-img-top" src="Rasa_Chatbot.jpg" alt="Project">
 			<div class="card-body">
@@ -219,6 +229,11 @@
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
+
+<div class="container-fluid" style="padding-top: 70px; padding-bottom: 70px;">
+	<div class="card-deck">
 		<div class="card">
 			<img class="card-img-top" src="TicTacToe.jpg" alt="Project">
 			<div class="card-body">
@@ -282,7 +297,7 @@ const translations = {
 		nav_projects: "Projects",
 		nav_contact: "Contact",
 		about_heading: "About Me",
-		about_text: "Hi, I am Aw Thura, an AI student based in Bayern, Germany; with a passion for using data to solve complex problems. I can code in Python and have experimented with R, Tableau & PowerBi. I have experience in computer vision, data science, and machine learning tasks. In this portfolio, I will provide you with sample work & projects that reflects my skills.",
+		about_text: "Hi, I am Aw Thura, an AI/ML/Deployment Engineer at Sentics GmbH in Bayern, Germany, with a passion for deploying production AI systems that solve complex real-world problems. I specialize in computer vision, machine learning deployment, and enterprise-scale system integration. In this portfolio, I showcase my professional work deploying digital twin systems, vision language models, and large-scale camera networks, alongside academic projects that demonstrate my technical foundation.",
 		projects_heading: "Projects",
 		view_project: "View Project",
 		contact_heading: "Contact Me",
@@ -296,6 +311,10 @@ const translations = {
 		// Project 12 - Sentics Camera Calibration
 		project12_title: "Camera Network Calibration at Sentics GmbH",
 		project12_desc: "Camera extrinsics calibration for large-scale production camera networks (10-160 cameras) at customer sites. Using a novel point-clicking methodology, I calibrate cameras that form the foundation for real-time localization and mapping systems. Contributing to calibration tool development to make the process scalable for enterprise deployments.",
+		
+		// Project 13 - Sentics VLM Deployment
+		project13_title: "Vision Language Model Deployment at Sentics GmbH",
+		project13_desc: "Deployed Qwen2-VL on company servers with web dashboard for internal access. Integrated VLM into production load documentation pipeline with fixed prompts generating JSON outputs. Coordinated with dashboard team to feed structured data from visual documents into company databases. Technologies: Qwen2-VL, Python, web dashboard, server deployment, prompt engineering, database integration.",
 		
 		// Project 1
 		project1_title: "Software Agile Project Manager/Team Leader for a web-dev team of 11 students",
@@ -343,7 +362,7 @@ const translations = {
 		nav_projects: "Projekte",
 		nav_contact: "Kontakt",
 		about_heading: "Über mich",
-		about_text: "Hallo, ich bin Aw Thura, ein KI-Student in Bayern, Deutschland, mit einer Leidenschaft dafür, Daten zur Lösung komplexer Probleme einzusetzen. Ich kann in Python programmieren und habe mit R, Tableau & PowerBI experimentiert. Ich habe Erfahrung in Computer Vision, Data Science und Machine Learning. In diesem Portfolio zeige ich Ihnen Beispielarbeiten und Projekte, die meine Fähigkeiten widerspiegeln.",
+		about_text: "Hallo, ich bin Aw Thura, ein KI/ML/Deployment-Ingenieur bei Sentics GmbH in Bayern, Deutschland, mit einer Leidenschaft für die Bereitstellung von Produktions-KI-Systemen zur Lösung komplexer realer Probleme. Ich spezialisiere mich auf Computer Vision, Machine-Learning-Bereitstellung und unternehmensweite Systemintegration. In diesem Portfolio zeige ich meine professionelle Arbeit bei der Bereitstellung von Digital-Twin-Systemen, Vision-Language-Modellen und großskaligen Kameranetzwerken sowie akademische Projekte, die meine technische Grundlage demonstrieren.",
 		projects_heading: "Projekte",
 		view_project: "Projekt ansehen",
 		contact_heading: "Kontaktieren Sie mich",
@@ -357,6 +376,10 @@ const translations = {
 		// Project 12 - Sentics Camera Calibration
 		project12_title: "Kameranetzwerk-Kalibrierung bei Sentics GmbH",
 		project12_desc: "Kamera-Extrinsics-Kalibrierung für großskalige Produktions-Kameranetzwerke (10-160 Kameras) an Kundenstandorten. Mit einer neuartigen Punkt-Klick-Methodik kalibriere ich Kameras, die die Grundlage für Echtzeit-Lokalisierungs- und Kartierungssysteme bilden. Beitrag zur Kalibrierungstool-Entwicklung, um den Prozess für Unternehmensbereitstellungen skalierbar zu machen.",
+		
+		// Project 13 - Sentics VLM Deployment
+		project13_title: "Vision-Language-Modell-Bereitstellung bei Sentics GmbH",
+		project13_desc: "Bereitstellung von Qwen2-VL auf Unternehmensservern mit Web-Dashboard für internen Zugriff. Integration des VLM in die Produktions-Lastdokumentations-Pipeline mit fixen Prompts zur JSON-Ausgabe. Koordination mit dem Dashboard-Team zur Einspeisung strukturierter Daten aus visuellen Dokumenten in Unternehmensdatenbanken. Technologien: Qwen2-VL, Python, Web-Dashboard, Server-Bereitstellung, Prompt Engineering, Datenbankintegration.",
 		
 		// Project 1
 		project1_title: "Software Agile Projektmanager/Teamleiter für ein Web-Entwicklungsteam von 11 Studenten",
@@ -428,7 +451,7 @@ function updateLanguage(lang) {
 
 // Toggle language function
 function toggleLanguage() {
-	const newLang = currentLanLang === 'en' ? 'de' : 'en';
+	const newLang = currentLang === 'en' ? 'de' : 'en';
 	updateLanguage(newLang);
 }
 

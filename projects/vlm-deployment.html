@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VLM Deployment - Aw Thura Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style>
+		.project-header { background-color: #f5f5f5; padding: 70px 0; }
+		.project-image { width: 100%; max-width: 800px; height: auto; margin: 30px auto; display: block; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+		.project-content { padding: 50px 0; }
+		.tech-badge { display: inline-block; background-color: #007bff; color: white; padding: 5px 15px; margin: 5px; border-radius: 20px; font-size: 14px; }
+		.section-title { margin-top: 40px; margin-bottom: 20px; font-weight: bold; color: #343a40; }
+		.btn-group-custom { margin-top: 30px; }
+		.btn-group-custom .btn { margin: 5px; }
+		.highlight-box { background-color: #e8f4f8; border-left: 4px solid #007bff; padding: 15px; margin: 20px 0; border-radius: 4px; }
+	</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	<a class="navbar-brand" href="../index.html" data-translate="portfolio">My Portfolio</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"><span class="navbar-toggler-icon"></span></button>
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link" href="../index.html#about" data-translate="nav_about">About</a></li>
+			<li class="nav-item"><a class="nav-link" href="../index.html#projects" data-translate="nav_projects">Projects</a></li>
+			<li class="nav-item"><a class="nav-link" href="../index.html#contact" data-translate="nav_contact">Contact</a></li>
+		</ul>
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item"><button class="btn btn-sm btn-outline-light" id="languageToggle" onclick="toggleLanguage()"><span id="langIcon">🇩🇪 DE</span></button></li>
+		</ul>
+	</div>
+</nav>
+
+<div class="project-header">
+	<div class="container">
+		<h1 data-translate="project_title">Vision Language Model Deployment & Integration</h1>
+		<p class="lead" data-translate="project_subtitle">Enterprise AI Model Deployment | Qwen2-VL | Dashboard Development | Production Integration | Sentics GmbH</p>
+	</div>
+</div>
+
+<div class="container project-content">
+	<div class="row">
+		<div class="col-lg-8 mx-auto">
+			<img src="../local_vlm.png" alt="VLM Deployment" class="project-image">
+			
+			<div class="highlight-box">
+				<strong data-translate="role_badge">Current Role:</strong>
+				<span data-translate="role_text">AI/ML/Deployment/Software Engineer at Sentics GmbH</span>
+			</div>
+			
+			<h3 class="section-title" data-translate="overview_title">Project Overview</h3>
+			<p data-translate="overview_text">
+				Deployed and integrated Qwen2-VL (Vision Language Model) on company infrastructure to automate document processing and load documentation workflows. The project encompasses full-stack deployment including model hosting on company servers, web-based dashboard development for internal access, and seamless integration with existing production pipelines. The system enables automated extraction of structured data from visual documents, feeding directly into company databases through coordinated cross-team integration.
+			</p>
+			
+			<h3 class="section-title" data-translate="responsibilities_title">Key Responsibilities</h3>
+			<ul data-translate="responsibilities_list">
+				<li>VLM deployment: Configured and deployed Qwen2-VL model on company server infrastructure</li>
+				<li>Dashboard development: Built simple web-based interface for model interaction and monitoring</li>
+				<li>Network integration: Configured local network access for internal company usage</li>
+				<li>Pipeline integration: Connected VLM to existing load documentation workflow</li>
+				<li>Prompt engineering: Developed and fixed prompts in codebase for consistent JSON output</li>
+				<li>Database integration: Implemented output parsing and feeding to company database</li>
+				<li>Cross-team coordination: Collaborated with dashboard development team for end-to-end integration</li>
+				<li>Production deployment: Ensured reliable operation in production environment</li>
+			</ul>
+			
+			<h3 class="section-title" data-translate="tech_title">Technology Stack</h3>
+			<div>
+				<span class="tech-badge">Qwen2-VL</span>
+				<span class="tech-badge">Vision Language Models</span>
+				<span class="tech-badge">Python</span>
+				<span class="tech-badge">Web Dashboard</span>
+				<span class="tech-badge">Server Deployment</span>
+				<span class="tech-badge">Network Configuration</span>
+				<span class="tech-badge">JSON Processing</span>
+				<span class="tech-badge">Database Integration</span>
+				<span class="tech-badge">Prompt Engineering</span>
+				<span class="tech-badge">Production Pipelines</span>
+			</div>
+			
+			<h3 class="section-title" data-translate="technical_title">Technical Highlights</h3>
+			<ul data-translate="technical_list">
+				<li>Model deployment: Successfully deployed large-scale VLM on company server infrastructure</li>
+				<li>Local network access: Configured localhost-based access for secure internal usage</li>
+				<li>Automated workflow: Integrated VLM into existing load documentation pipeline</li>
+				<li>Structured output: Implemented fixed prompts for consistent JSON extraction</li>
+				<li>Dashboard interface: Built user-friendly web interface for model interaction</li>
+				<li>Cross-team integration: Coordinated with dashboard team for seamless data flow</li>
+				<li>Production-ready: Deployed system handling real document processing workloads</li>
+			</ul>
+			
+			<h3 class="section-title" data-translate="architecture_title">System Architecture</h3>
+			<p data-translate="architecture_text">
+				The VLM deployment follows a multi-tier architecture: (1) Model inference layer running Qwen2-VL on company servers, (2) Web dashboard layer providing localhost access for internal users, (3) Integration layer connecting to load documentation pipeline with fixed prompts, (4) Data processing layer parsing JSON outputs, and (5) Database layer feeding structured data to company systems. The dashboard team consumes this data for visualization and reporting.
+			</p>
+			
+			<h3 class="section-title" data-translate="impact_title">Impact & Use Cases</h3>
+			<p data-translate="impact_text">
+				This VLM deployment automates previously manual document processing tasks, significantly reducing time required for load documentation. The system extracts structured information from visual documents (images, PDFs, scanned forms) and feeds it directly into production databases. Internal teams can access the model through a simple dashboard interface, while the automated pipeline integration enables hands-free processing of recurring documentation workflows. The cross-team collaboration ensures the extracted data is properly visualized and accessible to stakeholders.
+			</p>
+			
+			<h3 class="section-title" data-translate="skills_title">Skills Demonstrated</h3>
+			<ul data-translate="skills_list">
+				<li>Large language model deployment and configuration</li>
+				<li>Vision-language model integration and prompt engineering</li>
+				<li>Full-stack development: backend model hosting to frontend dashboard</li>
+				<li>Server infrastructure and network configuration</li>
+				<li>Production pipeline integration and automation</li>
+				<li>Cross-functional team coordination and collaboration</li>
+				<li>Database integration and structured data processing</li>
+				<li>Enterprise AI system deployment</li>
+			</ul>
+			
+			<div class="btn-group-custom">
+				<a href="https://sentics.de" target="_blank" class="btn btn-primary btn-lg" data-translate="view_company">Learn More at Sentics</a>
+				<a href="../index.html#projects" class="btn btn-secondary btn-lg" data-translate="back_portfolio">Back to Portfolio</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer font-small blue pt-4 mt-5" style="background-color:#343a40;color:white">
+	<div class="container-fluid text-center text-md-left">
+		<div class="row">
+			<div class="col-md-6 mt-md-0 mt-3"><h5 data-translate="footer_title">My Data Science & AI Portfolio</h5><p>© 2023 Aw Thura</p></div>
+			<div class="col-md-6 mb-md-0 mb-3">
+				<ul class="list-unstyled">
+					<li><a href="../index.html#about" data-translate="nav_about">About</a></li>
+					<li><a href="../index.html#projects" data-translate="nav_projects">Projects</a></li>
+					<li><a href="../index.html#contact" data-translate="nav_contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script>
+const translations = {
+	en: {
+		portfolio: "My Portfolio", nav_about: "About", nav_projects: "Projects", nav_contact: "Contact",
+		footer_title: "My Data Science & AI Portfolio",
+		project_title: "Vision Language Model Deployment & Integration",
+		project_subtitle: "Enterprise AI Model Deployment | Qwen2-VL | Dashboard Development | Production Integration | Sentics GmbH",
+		role_badge: "Current Role:",
+		role_text: "AI/ML/Deployment/Software Engineer at Sentics GmbH",
+		overview_title: "Project Overview",
+		overview_text: "Deployed and integrated Qwen2-VL (Vision Language Model) on company infrastructure to automate document processing and load documentation workflows. The project encompasses full-stack deployment including model hosting on company servers, web-based dashboard development for internal access, and seamless integration with existing production pipelines. The system enables automated extraction of structured data from visual documents, feeding directly into company databases through coordinated cross-team integration.",
+		responsibilities_title: "Key Responsibilities",
+		responsibilities_list: "VLM deployment: Configured and deployed Qwen2-VL model on company server infrastructure\nDashboard development: Built simple web-based interface for model interaction and monitoring\nNetwork integration: Configured local network access for internal company usage\nPipeline integration: Connected VLM to existing load documentation workflow\nPrompt engineering: Developed and fixed prompts in codebase for consistent JSON output\nDatabase integration: Implemented output parsing and feeding to company database\nCross-team coordination: Collaborated with dashboard development team for end-to-end integration\nProduction deployment: Ensured reliable operation in production environment",
+		tech_title: "Technology Stack",
+		technical_title: "Technical Highlights",
+		technical_list: "Model deployment: Successfully deployed large-scale VLM on company server infrastructure\nLocal network access: Configured localhost-based access for secure internal usage\nAutomated workflow: Integrated VLM into existing load documentation pipeline\nStructured output: Implemented fixed prompts for consistent JSON extraction\nDashboard interface: Built user-friendly web interface for model interaction\nCross-team integration: Coordinated with dashboard team for seamless data flow\nProduction-ready: Deployed system handling real document processing workloads",
+		architecture_title: "System Architecture",
+		architecture_text: "The VLM deployment follows a multi-tier architecture: (1) Model inference layer running Qwen2-VL on company servers, (2) Web dashboard layer providing localhost access for internal users, (3) Integration layer connecting to load documentation pipeline with fixed prompts, (4) Data processing layer parsing JSON outputs, and (5) Database layer feeding structured data to company systems. The dashboard team consumes this data for visualization and reporting.",
+		impact_title: "Impact & Use Cases",
+		impact_text: "This VLM deployment automates previously manual document processing tasks, significantly reducing time required for load documentation. The system extracts structured information from visual documents (images, PDFs, scanned forms) and feeds it directly into production databases. Internal teams can access the model through a simple dashboard interface, while the automated pipeline integration enables hands-free processing of recurring documentation workflows. The cross-team collaboration ensures the extracted data is properly visualized and accessible to stakeholders.",
+		skills_title: "Skills Demonstrated",
+		skills_list: "Large language model deployment and configuration\nVision-language model integration and prompt engineering\nFull-stack development: backend model hosting to frontend dashboard\nServer infrastructure and network configuration\nProduction pipeline integration and automation\nCross-functional team coordination and collaboration\nDatabase integration and structured data processing\nEnterprise AI system deployment",
+		view_company: "Learn More at Sentics",
+		back_portfolio: "Back to Portfolio"
+	},
+	de: {
+		portfolio: "Mein Portfolio", nav_about: "Über mich", nav_projects: "Projekte", nav_contact: "Kontakt",
+		footer_title: "Mein Data Science & KI Portfolio",
+		project_title: "Vision Language Model Bereitstellung & Integration",
+		project_subtitle: "Unternehmens-KI-Modell-Bereitstellung | Qwen2-VL | Dashboard-Entwicklung | Produktionsintegration | Sentics GmbH",
+		role_badge: "Aktuelle Position:",
+		role_text: "KI/ML/Deployment/Software-Ingenieur bei Sentics GmbH",
+		overview_title: "Projektübersicht",
+		overview_text: "Bereitstellung und Integration von Qwen2-VL (Vision Language Model) auf Unternehmensinfrastruktur zur Automatisierung der Dokumentenverarbeitung und Lastdokumentation. Das Projekt umfasst Full-Stack-Bereitstellung einschließlich Modell-Hosting auf Unternehmensservern, webbasierte Dashboard-Entwicklung für internen Zugriff und nahtlose Integration mit bestehenden Produktionspipelines. Das System ermöglicht automatisierte Extraktion strukturierter Daten aus visuellen Dokumenten und speist diese durch koordinierte teamübergreifende Integration direkt in Unternehmensdatenbanken.",
+		responsibilities_title: "Hauptverantwortlichkeiten",
+		responsibilities_list: "VLM-Bereitstellung: Konfiguration und Bereitstellung des Qwen2-VL-Modells auf Unternehmensserver-Infrastruktur\nDashboard-Entwicklung: Erstellung einer einfachen webbasierten Schnittstelle für Modellinteraktion und Überwachung\nNetzwerkintegration: Konfiguration des lokalen Netzwerkzugriffs für interne Unternehmensnutzung\nPipeline-Integration: Verbindung des VLM mit bestehendem Lastdokumentations-Workflow\nPrompt Engineering: Entwicklung und Fixierung von Prompts im Codebase für konsistente JSON-Ausgabe\nDatenbankintegration: Implementierung von Output-Parsing und Datenbankeinspeisung\nTeamübergreifende Koordination: Zusammenarbeit mit Dashboard-Entwicklungsteam für End-to-End-Integration\nProduktionsbereitstellung: Gewährleistung zuverlässigen Betriebs in Produktionsumgebung",
+		tech_title: "Technologie-Stack",
+		technical_title: "Technische Highlights",
+		technical_list: "Modellbereitstellung: Erfolgreiche Bereitstellung großskaliger VLM auf Unternehmensserver-Infrastruktur\nLokaler Netzwerkzugriff: Konfiguration localhost-basierter Zugriff für sichere interne Nutzung\nAutomatisierter Workflow: Integration von VLM in bestehende Lastdokumentations-Pipeline\nStrukturierte Ausgabe: Implementierung fixer Prompts für konsistente JSON-Extraktion\nDashboard-Schnittstelle: Erstellung benutzerfreundlicher Web-Schnittstelle für Modellinteraktion\nTeamübergreifende Integration: Koordination mit Dashboard-Team für nahtlosen Datenfluss\nProduktionsreif: Bereitstellung eines Systems zur Verarbeitung echter Dokumentenworkloads",
+		architecture_title: "Systemarchitektur",
+		architecture_text: "Die VLM-Bereitstellung folgt einer Multi-Tier-Architektur: (1) Modell-Inferenz-Schicht mit Qwen2-VL auf Unternehmensservern, (2) Web-Dashboard-Schicht für Localhost-Zugriff für interne Benutzer, (3) Integrationsschicht zur Verbindung mit Lastdokumentations-Pipeline mit fixen Prompts, (4) Datenverarbeitungsschicht zur Parsing von JSON-Ausgaben, und (5) Datenbankschicht zur Einspeisung strukturierter Daten in Unternehmenssysteme. Das Dashboard-Team nutzt diese Daten für Visualisierung und Reporting.",
+		impact_title: "Auswirkung & Anwendungsfälle",
+		impact_text: "Diese VLM-Bereitstellung automatisiert zuvor manuelle Dokumentenverarbeitungsaufgaben und reduziert die für Lastdokumentation benötigte Zeit erheblich. Das System extrahiert strukturierte Informationen aus visuellen Dokumenten (Bilder, PDFs, gescannte Formulare) und speist sie direkt in Produktionsdatenbanken ein. Interne Teams können über eine einfache Dashboard-Schnittstelle auf das Modell zugreifen, während die automatisierte Pipeline-Integration eine freihändige Verarbeitung wiederkehrender Dokumentations-Workflows ermöglicht. Die teamübergreifende Zusammenarbeit gewährleistet, dass die extrahierten Daten ordnungsgemäß visualisiert und für Stakeholder zugänglich sind.",
+		skills_title: "Demonstrierte Fähigkeiten",
+		skills_list: "Large Language Model Bereitstellung und Konfiguration\nVision-Language-Modell-Integration und Prompt Engineering\nFull-Stack-Entwicklung: Backend-Modell-Hosting bis Frontend-Dashboard\nServer-Infrastruktur und Netzwerkkonfiguration\nProduktionspipeline-Integration und Automatisierung\nFunktionsübergreifende Teamkoordination und Zusammenarbeit\nDatenbankintegration und strukturierte Datenverarbeitung\nUnternehmens-KI-System-Bereitstellung",
+		view_company: "Mehr erfahren bei Sentics",
+		back_portfolio: "Zurück zum Portfolio"
+	}
+};
+let currentLang = localStorage.getItem('preferredLanguage') || 'en';
+function updateLanguage(lang) {
+	document.querySelectorAll('[data-translate]').forEach(el => {
+		const key = el.getAttribute('data-translate');
+		if (translations[lang][key]) {
+			if (key.includes('_list')) { 
+				el.innerHTML = translations[lang][key].split('\n').map(i => `<li>${i}</li>`).join(''); 
+			} else { el.textContent = translations[lang][key]; }
+		}
+	});
+	document.getElementById('langIcon').textContent = lang === 'en' ? '🇩🇪 DE' : '🇬🇧 EN';
+	localStorage.setItem('preferredLanguage', lang); currentLang = lang;
+}
+function toggleLanguage() { updateLanguage(currentLang === 'en' ? 'de' : 'en'); }
+document.addEventListener('DOMContentLoaded', () => updateLanguage(currentLang));
+</script>
+</body>
+</html>
