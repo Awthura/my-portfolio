@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KLAR - Aw Thura Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+	
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<style>
+		.project-header { background-color: #f5f5f5; padding: 70px 0; }
+		.project-image { width: 100%; max-width: 800px; height: auto; margin: 30px auto; display: block; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+		.project-content { padding: 50px 0; }
+		.tech-badge { display: inline-block; background-color: #007bff; color: white; padding: 5px 15px; margin: 5px; border-radius: 20px; font-size: 14px; }
+		.section-title { margin-top: 40px; margin-bottom: 20px; font-weight: bold; color: #343a40; }
+		.btn-group-custom { margin-top: 30px; }
+		.btn-group-custom .btn { margin: 5px; }
+		.highlight-box { background-color: #e8f4f8; border-left: 4px solid #007bff; padding: 15px; margin: 20px 0; border-radius: 4px; }
+		.speed-callout { background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 20px; margin: 20px 0; border-radius: 4px; }
+		.speed-callout h4 { color: #856404; margin-bottom: 8px; }
+		.speed-callout p { margin-bottom: 0; color: #533f03; }
+	</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	<a class="navbar-brand" href="../index.html" data-translate="portfolio">My Portfolio</a>
+	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar"><span class="navbar-toggler-icon"></span></button>
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link" href="../index.html#about" data-translate="nav_about">About</a></li>
+			<li class="nav-item"><a class="nav-link" href="../index.html#projects" data-translate="nav_projects">Projects</a></li>
+			<li class="nav-item"><a class="nav-link" href="../index.html#contact" data-translate="nav_contact">Contact</a></li>
+		</ul>
+		<ul class="navbar-nav ms-auto">
+			<li class="nav-item"><button class="btn btn-sm btn-outline-light" id="languageToggle" onclick="toggleLanguage()"><span id="langIcon">🇩🇪 DE</span></button></li>
+		</ul>
+	</div>
+</nav>
+
+<div class="project-header">
+	<div class="container">
+		<h1 data-translate="project_title">KLAR — Interactive Algorithm & ML Learning Platform</h1>
+		<p class="lead" data-translate="project_subtitle">Full-Stack Development | Next.js 16 | React 19 | TypeScript | Built in 3 Weekends</p>
+	</div>
+</div>
+
+<div class="container project-content">
+	<div class="row">
+		<div class="col-lg-8 mx-auto">
+			<img src="../klar-screenshot.png" alt="KLAR Platform" class="project-image">
+
+			<div class="highlight-box">
+				<strong data-translate="role_badge">Personal Project:</strong>
+				<span data-translate="role_text">Built solo, shipped to production at klar-learn.dev</span>
+			</div>
+
+			<div class="speed-callout">
+				<h4 data-translate="speed_title">Built in 3 Weekends</h4>
+				<p data-translate="speed_text">From concept to a fully functional, live production platform with 25 interactive topics — designed, implemented, and deployed in 3 weekends. This demonstrates rapid full-stack delivery and the ability to ship quality software under real constraints.</p>
+			</div>
+
+			<h3 class="section-title" data-translate="overview_title">Project Overview</h3>
+			<p data-translate="overview_text">KLAR (Knowledge Lab for Algorithms & Reasoning) is an open-source interactive learning platform for Data Structures & Algorithms (DSA) and Machine Learning (ML). It uses a 3-phase pedagogy — Math → Visual → Code — to guide learners from mathematical intuition through animated visualizations to runnable code examples. The platform covers 25 topics (15 DSA + 10 ML), each with three fully interactive phases, and is live at klar-learn.dev.</p>
+
+			<h3 class="section-title" data-translate="features_title">Key Features</h3>
+			<ul data-translate="features_list">
+				<li>Interactive step-by-step visualizations powered by Framer Motion 12</li>
+				<li>LaTeX math rendering with KaTeX for precise mathematical notation</li>
+				<li>Syntax-highlighted code examples using Shiki</li>
+				<li>Mobile-responsive sidebar navigation for all 25 topics</li>
+				<li>Static export architecture for fast, reliable delivery via GitHub Pages</li>
+				<li>Custom domain (klar-learn.dev) with Google Search Console integration</li>
+				<li>End-to-end tested with Playwright</li>
+			</ul>
+
+			<h3 class="section-title" data-translate="scope_title">Project Scope</h3>
+			<p data-translate="scope_text">25 topics in total: 15 Data Structures & Algorithms (covering sorting, searching, trees, graphs, dynamic programming, and more) and 10 Machine Learning topics (covering linear regression, classification, neural networks, clustering, and more). Each topic includes three interactive phases, totalling 75 interactive learning modules across the platform.</p>
+
+			<h3 class="section-title" data-translate="tech_title">Technology Stack</h3>
+			<div>
+				<span class="tech-badge">Next.js 16</span>
+				<span class="tech-badge">React 19</span>
+				<span class="tech-badge">TypeScript 5</span>
+				<span class="tech-badge">Tailwind CSS 4</span>
+				<span class="tech-badge">Framer Motion 12</span>
+				<span class="tech-badge">KaTeX</span>
+				<span class="tech-badge">Shiki</span>
+				<span class="tech-badge">Playwright</span>
+				<span class="tech-badge">GitHub Pages</span>
+			</div>
+
+			<h3 class="section-title" data-translate="architecture_title">Architecture</h3>
+			<p data-translate="architecture_text">KLAR is built as a Next.js 16 application with static export, hosted on GitHub Pages and served via a custom domain (klar-learn.dev). The static export approach eliminates server costs, ensures zero cold starts, and delivers near-instant page loads globally. Framer Motion handles all client-side animation, while KaTeX and Shiki run at build time to pre-render math and code blocks. Playwright is used for end-to-end testing across all topic pages.</p>
+
+			<h3 class="section-title" data-translate="skills_title">Skills Demonstrated</h3>
+			<ul data-translate="skills_list">
+				<li>Full-stack web development with modern React ecosystem (Next.js 16, React 19, TypeScript)</li>
+				<li>UI/UX design for educational products: 3-phase pedagogy, responsive layouts</li>
+				<li>Algorithm implementation: DSA and ML algorithms coded from scratch with visualizations</li>
+				<li>Educational product thinking: structuring complex topics for progressive learning</li>
+				<li>Rapid delivery: production-ready platform shipped in 3 weekends</li>
+				<li>DevOps & deployment: static export, GitHub Pages, custom domain, Google Search Console</li>
+				<li>Testing: end-to-end testing with Playwright across all topic pages</li>
+			</ul>
+
+			<div class="btn-group-custom">
+				<a href="https://klar-learn.dev" target="_blank" class="btn btn-primary btn-lg" data-translate="visit_live">Visit klar-learn.dev</a>
+				<a href="https://github.com/Awthura/klar" target="_blank" class="btn btn-secondary btn-lg" data-translate="view_source">View Source on GitHub</a>
+				<a href="../index.html#projects" class="btn btn-outline-secondary btn-lg" data-translate="back_portfolio">Back to Portfolio</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer font-small blue pt-4 mt-5" style="background-color:#343a40;color:white">
+	<div class="container-fluid text-center text-md-left">
+		<div class="row">
+			<div class="col-md-6 mt-md-0 mt-3"><h5 data-translate="footer_title">My Data Science & AI Portfolio</h5><p>© 2026 Aw Thura</p></div>
+			<div class="col-md-6 mb-md-0 mb-3">
+				<ul class="list-unstyled">
+					<li><a href="../index.html#about" data-translate="nav_about">About</a></li>
+					<li><a href="../index.html#projects" data-translate="nav_projects">Projects</a></li>
+					<li><a href="../index.html#contact" data-translate="nav_contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script>
+const translations = {
+	en: {
+		portfolio: "My Portfolio", nav_about: "About", nav_projects: "Projects", nav_contact: "Contact",
+		footer_title: "My Data Science & AI Portfolio",
+		project_title: "KLAR — Interactive Algorithm & ML Learning Platform",
+		project_subtitle: "Full-Stack Development | Next.js 16 | React 19 | TypeScript | Built in 3 Weekends",
+		role_badge: "Personal Project:",
+		role_text: "Built solo, shipped to production at klar-learn.dev",
+		speed_title: "Built in 3 Weekends",
+		speed_text: "From concept to a fully functional, live production platform with 25 interactive topics — designed, implemented, and deployed in 3 weekends. This demonstrates rapid full-stack delivery and the ability to ship quality software under real constraints.",
+		overview_title: "Project Overview",
+		overview_text: "KLAR (Knowledge Lab for Algorithms & Reasoning) is an open-source interactive learning platform for Data Structures & Algorithms (DSA) and Machine Learning (ML). It uses a 3-phase pedagogy — Math → Visual → Code — to guide learners from mathematical intuition through animated visualizations to runnable code examples. The platform covers 25 topics (15 DSA + 10 ML), each with three fully interactive phases, and is live at klar-learn.dev.",
+		features_title: "Key Features",
+		features_list: "Interactive step-by-step visualizations powered by Framer Motion 12\nLaTeX math rendering with KaTeX for precise mathematical notation\nSyntax-highlighted code examples using Shiki\nMobile-responsive sidebar navigation for all 25 topics\nStatic export architecture for fast, reliable delivery via GitHub Pages\nCustom domain (klar-learn.dev) with Google Search Console integration\nEnd-to-end tested with Playwright",
+		scope_title: "Project Scope",
+		scope_text: "25 topics in total: 15 Data Structures & Algorithms (covering sorting, searching, trees, graphs, dynamic programming, and more) and 10 Machine Learning topics (covering linear regression, classification, neural networks, clustering, and more). Each topic includes three interactive phases, totalling 75 interactive learning modules across the platform.",
+		tech_title: "Technology Stack",
+		architecture_title: "Architecture",
+		architecture_text: "KLAR is built as a Next.js 16 application with static export, hosted on GitHub Pages and served via a custom domain (klar-learn.dev). The static export approach eliminates server costs, ensures zero cold starts, and delivers near-instant page loads globally. Framer Motion handles all client-side animation, while KaTeX and Shiki run at build time to pre-render math and code blocks. Playwright is used for end-to-end testing across all topic pages.",
+		skills_title: "Skills Demonstrated",
+		skills_list: "Full-stack web development with modern React ecosystem (Next.js 16, React 19, TypeScript)\nUI/UX design for educational products: 3-phase pedagogy, responsive layouts\nAlgorithm implementation: DSA and ML algorithms coded from scratch with visualizations\nEducational product thinking: structuring complex topics for progressive learning\nRapid delivery: production-ready platform shipped in 3 weekends\nDevOps & deployment: static export, GitHub Pages, custom domain, Google Search Console\nTesting: end-to-end testing with Playwright across all topic pages",
+		visit_live: "Visit klar-learn.dev",
+		view_source: "View Source on GitHub",
+		back_portfolio: "Back to Portfolio"
+	},
+	de: {
+		portfolio: "Mein Portfolio", nav_about: "Über mich", nav_projects: "Projekte", nav_contact: "Kontakt",
+		footer_title: "Mein Data Science & KI Portfolio",
+		project_title: "KLAR — Interaktive Algorithmus- & ML-Lernplattform",
+		project_subtitle: "Full-Stack-Entwicklung | Next.js 16 | React 19 | TypeScript | In 3 Wochenenden gebaut",
+		role_badge: "Persönliches Projekt:",
+		role_text: "Solo entwickelt, in Produktion gebracht auf klar-learn.dev",
+		speed_title: "In 3 Wochenenden gebaut",
+		speed_text: "Von der Idee zur vollständig funktionsfähigen, live Produktionsplattform mit 25 interaktiven Themen — designed, implementiert und deployt in 3 Wochenenden. Dies demonstriert schnelle Full-Stack-Lieferung und die Fähigkeit, qualitativ hochwertige Software unter echten Einschränkungen zu liefern.",
+		overview_title: "Projektübersicht",
+		overview_text: "KLAR (Knowledge Lab for Algorithms & Reasoning) ist eine Open-Source-Lernplattform für Datenstrukturen & Algorithmen (DSA) und Machine Learning (ML). Sie verwendet eine 3-Phasen-Pädagogik — Mathematik → Visualisierung → Code — um Lernende von mathematischer Intuition durch animierte Visualisierungen zu ausführbaren Codebeispielen zu führen. Die Plattform umfasst 25 Themen (15 DSA + 10 ML), jedes mit drei vollständig interaktiven Phasen, und ist live auf klar-learn.dev.",
+		features_title: "Hauptfunktionen",
+		features_list: "Interaktive Schritt-für-Schritt-Visualisierungen mit Framer Motion 12\nLaTeX-Mathe-Rendering mit KaTeX für präzise mathematische Notation\nSyntax-hervorgehobene Codebeispiele mit Shiki\nMobilresponsive Seitenleistennavigation für alle 25 Themen\nStatische Export-Architektur für schnelle, zuverlässige Lieferung via GitHub Pages\nBenutzerdefinierte Domain (klar-learn.dev) mit Google Search Console Integration\nEnd-to-End-Tests mit Playwright",
+		scope_title: "Projektumfang",
+		scope_text: "25 Themen insgesamt: 15 Datenstrukturen & Algorithmen (Sortieren, Suchen, Bäume, Graphen, dynamische Programmierung und mehr) und 10 Machine-Learning-Themen (lineare Regression, Klassifikation, neuronale Netze, Clustering und mehr). Jedes Thema umfasst drei interaktive Phasen — insgesamt 75 interaktive Lernmodule auf der Plattform.",
+		tech_title: "Technologie-Stack",
+		architecture_title: "Architektur",
+		architecture_text: "KLAR ist als Next.js-16-Anwendung mit statischem Export aufgebaut, auf GitHub Pages gehostet und über eine benutzerdefinierte Domain (klar-learn.dev) bereitgestellt. Der statische Export-Ansatz eliminiert Serverkosten, gewährleistet null Cold Starts und liefert nahezu sofortige Seitenladezeiten weltweit. Framer Motion übernimmt alle clientseitigen Animationen, während KaTeX und Shiki zur Build-Zeit Mathe- und Codeblöcke vorrendern. Playwright wird für End-to-End-Tests aller Themen-Seiten verwendet.",
+		skills_title: "Demonstrierte Fähigkeiten",
+		skills_list: "Full-Stack-Webentwicklung mit modernem React-Ökosystem (Next.js 16, React 19, TypeScript)\nUI/UX-Design für Lernprodukte: 3-Phasen-Pädagogik, responsive Layouts\nAlgorithmus-Implementierung: DSA- und ML-Algorithmen von Grund auf mit Visualisierungen\nPädagogisches Produktdenken: Strukturierung komplexer Themen für progressives Lernen\nSchnelle Lieferung: produktionsreife Plattform in 3 Wochenenden geliefert\nDevOps & Deployment: statischer Export, GitHub Pages, benutzerdefinierte Domain, Google Search Console\nTesting: End-to-End-Tests mit Playwright für alle Themen-Seiten",
+		visit_live: "klar-learn.dev besuchen",
+		view_source: "Quellcode auf GitHub ansehen",
+		back_portfolio: "Zurück zum Portfolio"
+	}
+};
+let currentLang = localStorage.getItem('preferredLanguage') || 'en';
+function updateLanguage(lang) {
+	document.querySelectorAll('[data-translate]').forEach(el => {
+		const key = el.getAttribute('data-translate');
+		if (translations[lang][key]) {
+			if (key.includes('_list')) {
+				el.innerHTML = translations[lang][key].split('\n').map(i => `<li>${i}</li>`).join('');
+			} else { el.textContent = translations[lang][key]; }
+		}
+	});
+	document.getElementById('langIcon').textContent = lang === 'en' ? '🇩🇪 DE' : '🇬🇧 EN';
+	localStorage.setItem('preferredLanguage', lang); currentLang = lang;
+}
+function toggleLanguage() { updateLanguage(currentLang === 'en' ? 'de' : 'en'); }
+document.addEventListener('DOMContentLoaded', () => updateLanguage(currentLang));
+</script>
+</body>
+</html>

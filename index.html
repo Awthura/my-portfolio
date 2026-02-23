@@ -1,438 +1,571 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>My Portfolio</title>
+	<title>Aw Thura — AI/ML & Full-Stack Portfolio</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<!-- SEO -->
+	<meta name="description" content="Portfolio of Aw Thura — AI/ML & Full-Stack Engineer. Specializing in computer vision, NVIDIA DeepStream, vision language models, and modern web development. Creator of KLAR learning platform. Available March 2026.">
+	<meta property="og:title" content="Aw Thura — AI/ML & Full-Stack Portfolio">
+	<meta property="og:description" content="AI/ML Engineer with production deployments for 8+ enterprise clients. Creator of KLAR — an interactive algorithm learning platform built in 3 weekends. Available March 2026.">
+	<meta property="og:image" content="klar-screenshot.png">
+	<meta property="og:type" content="website">
+	<!-- Bootstrap 5 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 	<style>
-		/* Make cards equal height and push buttons to bottom */
-		.card {
-			display: flex;
-			flex-direction: column;
-			height: 650px; /* Fixed height for all cards */
-			width: 100%;
-		}
-		
 		.card-img-top {
 			width: 100%;
-			height: 250px; /* Fixed height for images */
-			object-fit: cover; /* Maintain aspect ratio while filling the space */
+			height: 220px;
+			object-fit: cover;
 		}
-		
+		.card {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+		}
 		.card-body {
 			display: flex;
 			flex-direction: column;
 			flex: 1;
-			overflow: hidden; /* Prevent content from breaking layout */
 		}
-		
-		.card-title {
-			min-height: 60px; /* Reserve space for title */
-		}
-		
 		.card-text {
 			flex: 1;
-			overflow-y: auto; /* Add scroll if text is too long */
 		}
-		
 		.button-container {
 			margin-top: auto;
 			padding-top: 15px;
 		}
-		
-		/* Ensure card deck items are same height */
-		.card-deck .card {
-			margin-bottom: 15px;
+		.section-heading {
+			font-weight: 700;
+			color: #343a40;
+			border-left: 4px solid #0d6efd;
+			padding-left: 12px;
+			margin: 48px 0 24px 0;
 		}
+		.achievements-banner {
+			background: linear-gradient(135deg, #0d6efd, #0a58ca);
+			color: white;
+			padding: 13px 0;
+			font-size: 0.92rem;
+			font-weight: 500;
+			letter-spacing: 0.03em;
+		}
+		.skill-tag {
+			display: inline-block;
+			background-color: #f0f4ff;
+			color: #0d6efd;
+			border: 1px solid #bcd0ff;
+			padding: 4px 12px;
+			margin: 4px;
+			border-radius: 20px;
+			font-size: 13px;
+			font-weight: 500;
+		}
+		.skills-section {
+			background-color: #f8f9fa;
+			padding: 60px 0;
+		}
+		.hero-project-card {
+			border: 2px solid #0d6efd;
+			border-radius: 12px;
+			overflow: hidden;
+			margin-bottom: 50px;
+			margin-top: 28px;
+		}
+		.hero-project-card .hero-image {
+			width: 100%;
+			height: 100%;
+			min-height: 300px;
+			object-fit: cover;
+		}
+		.hero-badge {
+			display: inline-block;
+			padding: 4px 12px;
+			border-radius: 20px;
+			font-size: 12px;
+			font-weight: 700;
+			margin-right: 6px;
+			margin-bottom: 8px;
+			letter-spacing: 0.01em;
+		}
+		.badge-weekend { background-color: #fff3cd; color: #856404; border: 1px solid #ffc107; }
+		.badge-live    { background-color: #d1e7dd; color: #0a3622; border: 1px solid #198754; }
+		.badge-personal{ background-color: #e2d9f3; color: #432874; border: 1px solid #6f42c1; }
+		footer a { color: #adb5bd; }
+		footer a:hover { color: white; }
 	</style>
 </head>
 <body>
 
+<!-- Navbar -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-	<a class="navbar-brand" href="#" data-translate="portfolio">My Portfolio</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse" id="collapsibleNavbar">
-		<ul class="navbar-nav">
-			<li class="nav-item">
-				<a class="nav-link" href="#about" data-translate="nav_about">About</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#projects" data-translate="nav_projects">Projects</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#contact" data-translate="nav_contact">Contact</a>
-			</li>
-		</ul>
-		<ul class="navbar-nav ml-auto">
-			<li class="nav-item">
-				<button class="btn btn-sm btn-outline-light" id="languageToggle" onclick="toggleLanguage()">
-					<span id="langIcon">🇩🇪 DE</span>
-				</button>
-			</li>
-		</ul>
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#" data-translate="portfolio">My Portfolio</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="#about" data-translate="nav_about">About</a></li>
+				<li class="nav-item"><a class="nav-link" href="#projects" data-translate="nav_projects">Projects</a></li>
+				<li class="nav-item"><a class="nav-link" href="#contact" data-translate="nav_contact">Contact</a></li>
+			</ul>
+			<ul class="navbar-nav ms-auto">
+				<li class="nav-item">
+					<button class="btn btn-sm btn-outline-light" id="languageToggle" onclick="toggleLanguage()">
+						<span id="langIcon">🇩🇪 DE</span>
+					</button>
+				</li>
+			</ul>
+		</div>
 	</div>
 </nav>
 
-<div class="container-fluid" style="background-color: #f5f5f5; padding-top: 70px; padding-bottom: 70px;">
-	<div class="row">
-		<div class="col-md-8 text-md-left">
-			<h2 id="about" data-translate="about_heading">About Me</h2>
-			<p data-translate="about_text">Hi, I am Aw Thura, an AI/ML/Deployment Engineer at Sentics GmbH in Wolfsburg, Germany, with a passion for deploying production AI systems that solve complex real-world problems. I specialize in computer vision, machine learning deployment, and enterprise-scale system integration. In this portfolio, I showcase my professional work deploying digital twin systems, vision language models, and large-scale camera networks, alongside academic projects that demonstrate my technical foundation.</p>
-		</div>
-		<div class="col-md-4 text-right">
-			<img src="profile.jpg" alt="Profile Picture" style= "width: 300px; height: auto; padding-right: 80px">
-		</div>
+<!-- Achievements Banner -->
+<div class="achievements-banner">
+	<div class="container text-center" data-translate="achievements_banner">
+		500+ cameras calibrated &nbsp;|&nbsp; 3× inference speedup &nbsp;|&nbsp; 8+ enterprise clients &nbsp;|&nbsp; 25 interactive learning modules
 	</div>
 </div>
 
-<div class="container-fluid" style="padding-top: 70px; padding-bottom: 70px;">
-	<h2 id="projects" data-translate="projects_heading">Projects</h2>
-	<div class="card-deck">
-		<div class="card">
-			<img class="card-img-top" src="digital_twin_sentics.jpg" alt="Project">
-			<div class="card-body">
-				<h5 class="card-title" data-translate="project11_title">Digital Twin System Deployment at Sentics GmbH</h5>
-				<p class="card-text" data-translate="project11_desc">End-to-end deployment of enterprise-grade digital twin systems using large-scale camera networks (8-160 cameras) for real-time spatial intelligence. Responsible for camera calibration, DeepStream pipeline configuration, AI model deployment, and production system maintenance. Technologies: Computer Vision, NVIDIA DeepStream, RTSP Streaming, Kafka, production monitoring with 24/7 uptime requirements.</p>
-				<div class="button-container text-right">
-					<a href="projects/digital-twin-deployment.html" class="btn btn-primary" data-translate="view_project">View Project</a>
-				</div>
+<!-- About Section -->
+<div class="container-fluid" style="background-color: #f5f5f5; padding: 70px 0;">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-md-8">
+				<h2 id="about" data-translate="about_heading">About Me</h2>
+				<p data-translate="about_text">Hi, I am Aw Thura, an AI/ML & Full-Stack Engineer based in Wolfsburg, Germany. I graduated from Deggendorf Institute of Technology (THD) in February 2026 with a thesis grade of 1.0. At Sentics GmbH I deploy production AI systems — digital twin camera networks, DeepStream pipelines, and vision language models — serving 8+ enterprise clients. Outside work, I built KLAR, a full-stack interactive learning platform for algorithms and ML, shipped from concept to production in 3 weekends. I'm passionate about the full stack: from NVIDIA DeepStream inference pipelines to Next.js frontends.</p>
 			</div>
-		</div>
-		<div class="card">
-			<img class="card-img-top" src="camera-calibration.png" alt="Project">
-			<div class="card-body">
-				<h5 class="card-title" data-translate="project12_title">Camera Network Calibration at Sentics GmbH</h5>
-				<p class="card-text" data-translate="project12_desc">Camera extrinsics calibration for large-scale production camera networks (10-160 cameras) at customer sites. Using a novel point-clicking methodology, I calibrate cameras that form the foundation for real-time localization and mapping systems. Contributing to calibration tool development to make the process scalable for enterprise deployments.</p>
-				<div class="button-container text-right">
-					<a href="projects/camera-calibration.html" class="btn btn-primary" data-translate="view_project">View Project</a>
-				</div>
-			</div>
-		</div>
-		<div class="card">
-			<img class="card-img-top" src="local_vlm.png" alt="Project">
-			<div class="card-body">
-				<h5 class="card-title" data-translate="project13_title">Vision Language Model Deployment at Sentics GmbH</h5>
-				<p class="card-text" data-translate="project13_desc">Deployed Qwen2-VL on company servers with web dashboard for internal access. Integrated VLM into production load documentation pipeline with fixed prompts generating JSON outputs. Coordinated with dashboard team to feed structured data from visual documents into company databases. Technologies: Qwen2-VL, Python, web dashboard, server deployment, prompt engineering, database integration.</p>
-				<div class="button-container text-right">
-					<a href="projects/vlm-deployment.html" class="btn btn-primary" data-translate="view_project">View Project</a>
-				</div>
+			<div class="col-md-4 text-end">
+				<img src="profile.jpg" alt="Profile Picture" style="width: 280px; height: auto; padding-right: 40px;">
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="container-fluid" style="padding-top: 70px; padding-bottom: 70px;">
-	<div class="card-deck">
-		<div class="card">
-			<img class="card-img-top" src="SAI_home.jpg" alt="Project">
-			<div class="card-body">
-				<h5 class="card-title" data-translate="project1_title">Software Agile Project Manager/Team Leader for a web-dev team of 11 students</h5>
-				<p class="card-text" data-translate="project1_desc">This is a University project for Software Engineering module at THD. I worked as a team leader and led a team of 11 students to develop a website that displays & filters cooking recipes from a database. Pipeline used was Springboot for backend, Vue for Frontend & MongoDb for dataase (Springboot + MongoDb + Vue) & dockerized. The android part for this project is unfinished and still in mid-development stage. I mainly worked on backend team for this project. The repo in the link provided is a reupload version of the original that we hosted on Gitlab.</p>
-				<div class="button-container text-right">
-					<a href="projects/cooking-recipes.html" class="btn btn-primary" data-translate="view_project">View Project</a>
+<!-- Skills Section -->
+<div class="skills-section">
+	<div class="container">
+		<h2 data-translate="skills_heading">Skills</h2>
+		<div class="row mt-4">
+			<div class="col-md-3 mb-4">
+				<h6 class="fw-bold text-uppercase text-muted mb-3" data-translate="skills_ai_title">AI / ML</h6>
+				<span class="skill-tag">PyTorch</span>
+				<span class="skill-tag">Computer Vision</span>
+				<span class="skill-tag">NVIDIA DeepStream</span>
+				<span class="skill-tag">YOLO</span>
+				<span class="skill-tag">Vision Language Models</span>
+				<span class="skill-tag">Scikit-learn</span>
+			</div>
+			<div class="col-md-3 mb-4">
+				<h6 class="fw-bold text-uppercase text-muted mb-3" data-translate="skills_languages_title">Languages</h6>
+				<span class="skill-tag">Python</span>
+				<span class="skill-tag">TypeScript</span>
+				<span class="skill-tag">JavaScript</span>
+				<span class="skill-tag">C++</span>
+				<span class="skill-tag">Java</span>
+				<span class="skill-tag">SQL</span>
+			</div>
+			<div class="col-md-3 mb-4">
+				<h6 class="fw-bold text-uppercase text-muted mb-3" data-translate="skills_web_title">Web & Full-Stack</h6>
+				<span class="skill-tag">Next.js</span>
+				<span class="skill-tag">React</span>
+				<span class="skill-tag">Tailwind CSS</span>
+				<span class="skill-tag">Spring Boot</span>
+				<span class="skill-tag">Vue.js</span>
+				<span class="skill-tag">REST APIs</span>
+			</div>
+			<div class="col-md-3 mb-4">
+				<h6 class="fw-bold text-uppercase text-muted mb-3" data-translate="skills_devops_title">Tools & DevOps</h6>
+				<span class="skill-tag">Docker</span>
+				<span class="skill-tag">GitHub Actions</span>
+				<span class="skill-tag">Kafka</span>
+				<span class="skill-tag">Linux</span>
+				<span class="skill-tag">Git</span>
+				<span class="skill-tag">Playwright</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Projects Section -->
+<div class="container-fluid" style="padding: 70px 0;">
+	<div class="container">
+		<h2 id="projects" data-translate="projects_heading">Projects</h2>
+
+		<!-- KLAR Hero Card -->
+		<div class="hero-project-card">
+			<div class="row g-0">
+				<div class="col-md-5 d-none d-md-block">
+					<img src="klar-screenshot.png" alt="KLAR Platform" class="hero-image">
+				</div>
+				<div class="col-md-7">
+					<div class="card-body p-4 p-lg-5">
+						<div class="mb-2">
+							<span class="hero-badge badge-weekend">⚡ Built in 3 Weekends</span>
+							<span class="hero-badge badge-live">🌐 Live at klar-learn.dev</span>
+							<span class="hero-badge badge-personal">Personal Project</span>
+						</div>
+						<h3 class="card-title mt-2" data-translate="project_klar_title">KLAR — Interactive Algorithm & ML Learning Platform</h3>
+						<p class="card-text" data-translate="project_klar_desc">Built solo in 3 weekends and shipped to production. An open-source interactive learning platform covering 25 topics (15 DSA + 10 ML) using a 3-phase Math → Visual → Code pedagogy. Live at klar-learn.dev. Technologies: Next.js 16, React 19, TypeScript, Tailwind CSS 4, Framer Motion, KaTeX, Shiki.</p>
+						<div class="mt-auto pt-3 d-flex flex-wrap gap-2">
+							<a href="projects/klar.html" class="btn btn-primary" data-translate="view_project">View Project</a>
+							<a href="https://klar-learn.dev" target="_blank" class="btn btn-outline-primary" data-translate="visit_live">Live Demo</a>
+							<a href="https://github.com/Awthura/klar" target="_blank" class="btn btn-outline-secondary" data-translate="view_source">GitHub</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="card">
-			<img class="card-img-top" src="flood_force_screenshot.png" alt="Project">
-			<div class="card-body">
-				<h5 class="card-title" data-translate="project10_title">Flood Force - Strategic Flood Management Game</h5>
-				<p class="card-text" data-translate="project10_desc">A strategic tile-based flood management game developed for the AI in Gaming course at THD. Players protect riverside communities from flooding using infrastructure and natural solutions. Features dynamic water physics, resource management, and educational content about sustainable flood management and climate adaptation. Published on itch.io with positive player feedback on gameplay and environmental awareness.</p>
-				<div class="button-container text-right">
-					<a href="projects/flood-force.html" class="btn btn-primary" data-translate="view_project">View Project</a>
+
+		<!-- Professional Work -->
+		<h3 class="section-heading" data-translate="section_professional">Professional Work at Sentics GmbH</h3>
+		<div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+			<div class="col">
+				<div class="card h-100">
+					<img class="card-img-top" src="digital_twin_sentics.jpg" alt="Digital Twin System">
+					<div class="card-body">
+						<h5 class="card-title" data-translate="project11_title">Digital Twin System Deployment at Sentics GmbH</h5>
+						<p class="card-text" data-translate="project11_desc">End-to-end deployment of enterprise-grade digital twin systems using large-scale camera networks (8-160 cameras) for real-time spatial intelligence. Responsible for camera calibration, DeepStream pipeline configuration, AI model deployment, and production system maintenance. Technologies: Computer Vision, NVIDIA DeepStream, RTSP Streaming, Kafka, production monitoring with 24/7 uptime requirements.</p>
+						<div class="button-container text-end">
+							<a href="projects/digital-twin-deployment.html" class="btn btn-primary" data-translate="view_project">View Project</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card h-100">
+					<img class="card-img-top" src="camera-calibration.png" alt="Camera Calibration">
+					<div class="card-body">
+						<h5 class="card-title" data-translate="project12_title">Camera Network Calibration at Sentics GmbH</h5>
+						<p class="card-text" data-translate="project12_desc">Camera extrinsics calibration for large-scale production camera networks (10-160 cameras) at customer sites. Using a novel point-clicking methodology, I calibrate cameras that form the foundation for real-time localization and mapping systems. Contributing to calibration tool development to make the process scalable for enterprise deployments.</p>
+						<div class="button-container text-end">
+							<a href="projects/camera-calibration.html" class="btn btn-primary" data-translate="view_project">View Project</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card h-100">
+					<img class="card-img-top" src="local_vlm.png" alt="VLM Deployment">
+					<div class="card-body">
+						<h5 class="card-title" data-translate="project13_title">Vision Language Model Deployment at Sentics GmbH</h5>
+						<p class="card-text" data-translate="project13_desc">Deployed Qwen2-VL on company servers with web dashboard for internal access. Integrated VLM into production load documentation pipeline with fixed prompts generating JSON outputs. Coordinated with dashboard team to feed structured data from visual documents into company databases. Technologies: Qwen2-VL, Python, web dashboard, server deployment, prompt engineering, database integration.</p>
+						<div class="button-container text-end">
+							<a href="projects/vlm-deployment.html" class="btn btn-primary" data-translate="view_project">View Project</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="card">
-			<img class="card-img-top" src="Hackathon.png" alt="Project">
-			<div class="card-body">
-				<h5 class="card-title" data-translate="project5_title">ASEAN-INDIA Hackathon (Winning Project)</h5>
-				<p class="card-text" data-translate="project5_desc">Me and five other students formed a team and won ASEAN-INDIA International Hackathon 2021. This is an overview of our project from the Hackathon. We provided a small scale solution package for local fishermen. My tasks on this Hackathon are the data analysis and visualization parts, as well as dealing with ArcGIS to provide end users with interactive maps.</p>
-				<div class="button-container text-right">
-					<a href="projects/hackathon.html" class="btn btn-primary" data-translate="view_project">View Project</a>
+
+		<!-- Academic Projects -->
+		<h3 class="section-heading" data-translate="section_academic">Academic Projects</h3>
+		<div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+			<div class="col">
+				<div class="card h-100">
+					<img class="card-img-top" src="Hackathon.png" alt="ASEAN-INDIA Hackathon">
+					<div class="card-body">
+						<h5 class="card-title" data-translate="project5_title">ASEAN-INDIA Hackathon (Winning Project)</h5>
+						<p class="card-text" data-translate="project5_desc">Me and five other students formed a team and won ASEAN-INDIA International Hackathon 2021. This is an overview of our project from the Hackathon. We provided a small scale solution package for local fishermen. My tasks on this Hackathon are the data analysis and visualization parts, as well as dealing with ArcGIS to provide end users with interactive maps.</p>
+						<div class="button-container text-end">
+							<a href="projects/hackathon.html" class="btn btn-primary" data-translate="view_project">View Project</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card h-100">
+					<img class="card-img-top" src="YOLO_trishaw.png" alt="YOLO Object Detection">
+					<div class="card-body">
+						<h5 class="card-title" data-translate="project7_title">Custom Object Detection with YOLO</h5>
+						<p class="card-text" data-translate="project7_desc">This is a project that I did back in 2019 & early 2020 for my final year thesis at Yangon Technological University. In this project, the pre-existing YOLO object detection model is customized to be able to detect local traffic in Burma, including pedestrians in local costumes, old local buses and unique local vehicles like trishaws. The project is written entirely in .ipynb format as I had to use Google Colab for the GPU requirement for the transfer learning process.</p>
+						<div class="button-container text-end">
+							<a href="projects/yolo-surveillance.html" class="btn btn-primary" data-translate="view_project">View Project</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card h-100">
+					<img class="card-img-top" src="SAI_home.jpg" alt="Software Engineering Project">
+					<div class="card-body">
+						<h5 class="card-title" data-translate="project1_title">Software Agile Project Manager/Team Leader for a web-dev team of 11 students</h5>
+						<p class="card-text" data-translate="project1_desc">This is a University project for Software Engineering module at THD. I worked as a team leader and led a team of 11 students to develop a website that displays & filters cooking recipes from a database. Pipeline used was Springboot for backend, Vue for Frontend & MongoDb for dataase (Springboot + MongoDb + Vue) & dockerized. The android part for this project is unfinished and still in mid-development stage. I mainly worked on backend team for this project. The repo in the link provided is a reupload version of the original that we hosted on Gitlab.</p>
+						<div class="button-container text-end">
+							<a href="projects/cooking-recipes.html" class="btn btn-primary" data-translate="view_project">View Project</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+			<div class="col">
+				<div class="card h-100">
+					<img class="card-img-top" src="flood_force_screenshot.png" alt="Flood Force Game">
+					<div class="card-body">
+						<h5 class="card-title" data-translate="project10_title">Flood Force - Strategic Flood Management Game</h5>
+						<p class="card-text" data-translate="project10_desc">A strategic tile-based flood management game developed for the AI in Gaming course at THD. Players protect riverside communities from flooding using infrastructure and natural solutions. Features dynamic water physics, resource management, and educational content about sustainable flood management and climate adaptation. Published on itch.io with positive player feedback on gameplay and environmental awareness.</p>
+						<div class="button-container text-end">
+							<a href="projects/flood-force.html" class="btn btn-primary" data-translate="view_project">View Project</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card h-100">
+					<img class="card-img-top" src="Brain_Tumor_app.jpg" alt="Brain Tumor Classifier">
+					<div class="card-body">
+						<h5 class="card-title" data-translate="project4_title">Brain Tumor Classifier</h5>
+						<p class="card-text" data-translate="project4_desc">This project uses Machine Learning to classify brain Tumors on a specific dataset that provides necessary features for the model. The model is trained on a reliable dataset from kaggle. The UI provides sliders to adjust the features and the possiblity of a tumor given the adjusted values. The image from the dataset that has the closet values for the adjusted features is displayed on the UI. Necessary stats and metrics are also provided.</p>
+						<div class="button-container text-end">
+							<a href="projects/brain-tumor.html" class="btn btn-primary" data-translate="view_project">View Project</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card h-100">
+					<img class="card-img-top" src="Paper_snippet.jpg" alt="Chess ELO ML">
+					<div class="card-body">
+						<h5 class="card-title" data-translate="project2_title">Machine Learning Model to predict Chess ELO</h5>
+						<p class="card-text" data-translate="project2_desc">This is done as a part of ML module at THD. We researched on how to create an ELO-guessing model based on a chess games database. We came up with several equations to extract features. The report is written using LaTex. This thumbnail is a snippet of our report</p>
+						<div class="button-container text-end">
+							<a href="projects/chess-elo.html" class="btn btn-primary" data-translate="view_project">View Project</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+			<div class="col">
+				<div class="card h-100">
+					<img class="card-img-top" src="Detection.jpeg" alt="Chess Detection">
+					<div class="card-body">
+						<h5 class="card-title" data-translate="project3_title">Chess-Piece Detection with YOLO</h5>
+						<p class="card-text" data-translate="project3_desc">This is a project from Computer Vision module at THD. We implemented YOLOv8 to localize and classify chess pieces. This model can detect chess pieces. The detected class is displayed alongside the confidence level on the label. This project could be run on a video stream & also webcam compatible.</p>
+						<div class="button-container text-end">
+							<a href="projects/chess-detection.html" class="btn btn-primary" data-translate="view_project">View Project</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card h-100">
+					<img class="card-img-top" src="Rasa_Chatbot.jpg" alt="Library Chatbot">
+					<div class="card-body">
+						<h5 class="card-title" data-translate="project6_title">Library Assistant Chatbot</h5>
+						<p class="card-text" data-translate="project6_desc">Günther is a chat bot designed to help with the process of finding a book from the library database of our University. This chatbot can browse through the books, suggest recommendations and provide information on the books.</p>
+						<div class="button-container text-end">
+							<a href="projects/chatbot.html" class="btn btn-primary" data-translate="view_project">View Project</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card h-100">
+					<img class="card-img-top" src="TA_AI_course.jpg" alt="Teaching Assistant">
+					<div class="card-body">
+						<h5 class="card-title" data-translate="project9_title">Teaching Assistant for AI module</h5>
+						<p class="card-text" data-translate="project9_desc">Back in 2020 December, I helped Professor Dr. Theint Theint Thu as a teaching assistant for her AI module at Yangon Technological University. The course took place entirely online due to COVID-19. There were around 80 students in the online lecture room. My main contributions were on course week three, focusing on YOLO model & unsupervised learning. I have documented lectures for my parts using notebooks and they are also published on the course website.</p>
+						<div class="button-container text-end">
+							<a href="projects/teaching-assistant.html" class="btn btn-primary" data-translate="view_project">View Project</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="container-fluid" style="padding-top: 70px; padding-bottom: 70px;">
-	<div class="card-deck">
-		<div class="card">
-			<img class="card-img-top" src="Paper_snippet.jpg" alt="Project">
-			<div class="card-body">
-				<h5 class="card-title" data-translate="project2_title">Machine Learning Model to predict Chess ELO</h5>
-				<p class="card-text" data-translate="project2_desc">This is done as a part of ML module at THD. We researched on how to create an ELO-guessing model based on a chess games database. We came up with several equations to extract features. The report is written using LaTex. This thumbnail is a snippet of our report</p>
-				<div class="button-container text-right">
-					<a href="projects/chess-elo.html" class="btn btn-primary" data-translate="view_project">View Project</a>
-				</div>
+<!-- Contact -->
+<div class="container-fluid" style="background-color: #f5f5f5; padding: 70px 0;">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h2 id="contact" data-translate="contact_heading">Contact Me</h2>
+				<p data-translate="contact_text">Feel free to contact me at:</p>
+				<ul>
+					<li>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e8899f9c809d9a89c68c8da88f85898184c68b8785">[email&#160;protected]</a></li>
+					<li>LinkedIn: <a href="https://www.linkedin.com/in/awthura">https://www.linkedin.com/in/awthura</a></li>
+					<li>GitHub: <a href="https://github.com/Awthura">https://github.com/Awthura</a></li>
+					<li>KLAR: <a href="https://klar-learn.dev" target="_blank">klar-learn.dev</a></li>
+				</ul>
 			</div>
-		</div>
-		<div class="card">
-			<img class="card-img-top" src="YOLO_trishaw.png" alt="Project">
-			<div class="card-body">
-				<h5 class="card-title" data-translate="project7_title">Custom Object Detection with YOLO</h5>
-				<p class="card-text" data-translate="project7_desc">This is a project that I did back in 2019 & early 2020 for my final year thesis at Yangon Technological University. In this project, the pre-existing YOLO object detection model is customized to be able to detect local traffic in Burma, including pedestrians in local costumes, old local buses and unique local vehicles like trishaws. The project is written entirely in .ipynb format as I had to use Google Colab for the GPU requirement for the transfer learning process.</p>
-				<div class="button-container text-right">
-					<a href="projects/yolo-surveillance.html" class="btn btn-primary" data-translate="view_project">View Project</a>
-				</div>
-			</div>
-		</div>
-		<div class="card">
-			<img class="card-img-top" src="Brain_Tumor_app.jpg" alt="Project">
-			<div class="card-body">
-				<h5 class="card-title" data-translate="project4_title">Brain Tumor Classifier</h5>
-				<p class="card-text" data-translate="project4_desc">This project uses Machine Learning to classify brain Tumors on a specific dataset that provides necessary features for the model. The model is trained on a reliable dataset from kaggle. The UI provides sliders to adjust the features and the possiblity of a tumor given the adjusted values. The image from the dataset that has the closet values for the adjusted features is displayed on the UI. Necessary stats and metrics are also provided.</p>
-				<div class="button-container text-right">
-					<a href="projects/brain-tumor.html" class="btn btn-primary" data-translate="view_project">View Project</a>
-				</div>
+			<div class="col-md-6">
+				<img src="contact.jpg" alt="Contact Picture" style="width: 200px; height: auto;">
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="container-fluid" style="padding-top: 70px; padding-bottom: 70px;">
-	<div class="card-deck">
-		<div class="card">
-			<img class="card-img-top" src="Detection.jpeg" alt="Project">
-			<div class="card-body">
-				<h5 class="card-title" data-translate="project3_title">Chess-Piece Detection with YOLO</h5>
-				<p class="card-text" data-translate="project3_desc">This is a project from Computer Vision module at THD. We implemented YOLOv8 to localize and classify chess pieces. This model can detect chess pieces. The detected class is displayed alongside the confidence level on the label. This project could be run on a video stream & also webcam compatible.</p>
-				<div class="button-container text-right">
-					<a href="projects/chess-detection.html" class="btn btn-primary" data-translate="view_project">View Project</a>
-				</div>
-			</div>
-		</div>
-		<div class="card">
-			<img class="card-img-top" src="Rasa_Chatbot.jpg" alt="Project">
-			<div class="card-body">
-				<h5 class="card-title" data-translate="project6_title">Library Assistant Chatbot</h5>
-				<p class="card-text" data-translate="project6_desc">Günther is a chat bot designed to help with the process of finding a book from the library database of our University. This chatbot can browse through the books, suggest recommendations and provide information on the books.</p>
-				<div class="button-container text-right">
-					<a href="projects/chatbot.html" class="btn btn-primary" data-translate="view_project">View Project</a>
-				</div>
-			</div>
-		</div>
-		<div class="card">
-			<img class="card-img-top" src="TA_AI_course.jpg" alt="Project">
-			<div class="card-body">
-				<h5 class="card-title" data-translate="project9_title">Teaching Assistant for AI module</h5>
-				<p class="card-text" data-translate="project9_desc">Back in 2020 December, I helped Professor Dr. Theint Theint Thu as a teaching assistant for her AI module at Yangon Technological University. The course took place entirely online due to COVID-19. There were around 80 students in the online lecture room. My main contributions were on course week three, focusing on YOLO model & unsupervised learning. I have documented lectures for my parts using notebooks and they are also published on the course website.</p>
-				<div class="button-container text-right">
-					<a href="projects/teaching-assistant.html" class="btn btn-primary" data-translate="view_project">View Project</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="container-fluid" style="background-color: #f5f5f5; padding-top: 70px; padding-bottom: 70px;">
-	<div class="row">
-		<div class="col-md-6">
-			<h2 id="contact" data-translate="contact_heading">Contact Me</h2>
-			<p data-translate="contact_text">Feel free to contact me at:</p>
-			<ul>
-				<li>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e8899f9c809d9a89c68c8da88f85898184c68b8785">[email&#160;protected]</a></li>
-				<li>LinkedIn: <a href="https://www.linkedin.com/in/awthura">https://www.linkedin.com/in/awthura</a></li>
-				<li>Github: <a href="https://github.com/Awthura">https://github.com/Awthura</a></li>
-				
-			</ul>
-		</div>
-		<div class="col-md-6">
-			<img src="contact.jpg" alt="Contact Picture" style= "width: 200px; height: auto;">
-		</div>
-	</div>
-</div>
-
-<footer class="page-footer font-small blue pt-4" style="background-color: #343a40; color: white;">
-	<div class="container-fluid text-center text-md-left">
+<!-- Footer -->
+<footer class="pt-4" style="background-color: #343a40; color: white;">
+	<div class="container-fluid text-center text-md-start">
 		<div class="row">
 			<div class="col-md-6 mt-md-0 mt-3">
 				<h5 data-translate="footer_title">My Data Science & AI Portfolio</h5>
-				<p>© 2023 Aw Thura</p>
+				<p>© 2026 Aw Thura</p>
 			</div>
 			<div class="col-md-6 mb-md-0 mb-3">
 				<ul class="list-unstyled">
-					<li>
-						<a href="#about" data-translate="nav_about">About</a>
-					</li>
-					<li>
-						<a href="#projects" data-translate="nav_projects">Projects</a>
-					</li>
-					<li>
-						<a href="#contact" data-translate="nav_contact">Contact</a>
-					</li>
+					<li><a href="#about" data-translate="nav_about">About</a></li>
+					<li><a href="#projects" data-translate="nav_projects">Projects</a></li>
+					<li><a href="#contact" data-translate="nav_contact">Contact</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// Translation object
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>
 const translations = {
 	en: {
 		portfolio: "My Portfolio",
 		nav_about: "About",
 		nav_projects: "Projects",
 		nav_contact: "Contact",
+		achievements_banner: "500+ cameras calibrated  |  3× inference speedup  |  8+ enterprise clients  |  25 interactive learning modules",
 		about_heading: "About Me",
-		about_text: "Hi, I am Aw Thura, an AI/ML/Deployment Engineer at Sentics GmbH in Wolfsburg, Germany, with a passion for deploying production AI systems that solve complex real-world problems. I specialize in computer vision, machine learning deployment, and enterprise-scale system integration. In this portfolio, I showcase my professional work deploying digital twin systems, vision language models, and large-scale camera networks, alongside academic projects that demonstrate my technical foundation.",
+		about_text: "Hi, I am Aw Thura, an AI/ML & Full-Stack Engineer based in Wolfsburg, Germany. I graduated from Deggendorf Institute of Technology (THD) in February 2026 with a thesis grade of 1.0. At Sentics GmbH I deploy production AI systems — digital twin camera networks, DeepStream pipelines, and vision language models — serving 8+ enterprise clients. Outside work, I built KLAR, a full-stack interactive learning platform for algorithms and ML, shipped from concept to production in 3 weekends. I'm passionate about the full stack: from NVIDIA DeepStream inference pipelines to Next.js frontends.",
+		skills_heading: "Skills",
+		skills_ai_title: "AI / ML",
+		skills_languages_title: "Languages",
+		skills_web_title: "Web & Full-Stack",
+		skills_devops_title: "Tools & DevOps",
 		projects_heading: "Projects",
+		section_professional: "Professional Work at Sentics GmbH",
+		section_academic: "Academic Projects",
 		view_project: "View Project",
+		visit_live: "Live Demo",
+		view_source: "GitHub",
 		contact_heading: "Contact Me",
 		contact_text: "Feel free to contact me at:",
 		footer_title: "My Data Science & AI Portfolio",
-		
-		// Project 11 - Sentics Digital Twin
+
+		project_klar_title: "KLAR — Interactive Algorithm & ML Learning Platform",
+		project_klar_desc: "Built solo in 3 weekends and shipped to production. An open-source interactive learning platform covering 25 topics (15 DSA + 10 ML) using a 3-phase Math → Visual → Code pedagogy. Live at klar-learn.dev. Technologies: Next.js 16, React 19, TypeScript, Tailwind CSS 4, Framer Motion, KaTeX, Shiki.",
+
 		project11_title: "Digital Twin System Deployment at Sentics GmbH",
 		project11_desc: "End-to-end deployment of enterprise-grade digital twin systems using large-scale camera networks (8-160 cameras) for real-time spatial intelligence. Responsible for camera calibration, DeepStream pipeline configuration, AI model deployment, and production system maintenance. Technologies: Computer Vision, NVIDIA DeepStream, RTSP Streaming, Kafka, production monitoring with 24/7 uptime requirements.",
-		
-		// Project 12 - Sentics Camera Calibration
+
 		project12_title: "Camera Network Calibration at Sentics GmbH",
 		project12_desc: "Camera extrinsics calibration for large-scale production camera networks (10-160 cameras) at customer sites. Using a novel point-clicking methodology, I calibrate cameras that form the foundation for real-time localization and mapping systems. Contributing to calibration tool development to make the process scalable for enterprise deployments.",
-		
-		// Project 13 - Sentics VLM Deployment
+
 		project13_title: "Vision Language Model Deployment at Sentics GmbH",
 		project13_desc: "Deployed Qwen2-VL on company servers with web dashboard for internal access. Integrated VLM into production load documentation pipeline with fixed prompts generating JSON outputs. Coordinated with dashboard team to feed structured data from visual documents into company databases. Technologies: Qwen2-VL, Python, web dashboard, server deployment, prompt engineering, database integration.",
-		
-		// Project 1
-		project1_title: "Software Agile Project Manager/Team Leader for a web-dev team of 11 students",
-		project1_desc: "This is a University project for Software Engineering module at THD. I worked as a team leader and led a team of 11 students to develop a website that displays & filters cooking recipes from a database. Pipeline used was Springboot for backend, Vue for Frontend & MongoDb for dataase (Springboot + MongoDb + Vue) & dockerized. The android part for this project is unfinished and still in mid-development stage. I mainly worked on backend team for this project. The repo in the link provided is a reupload version of the original that we hosted on Gitlab.",
-		
-		// Project 2
-		project2_title: "Machine Learning Model to predict Chess ELO",
-		project2_desc: "This is done as a part of ML module at THD. We researched on how to create an ELO-guessing model based on a chess games database. We came up with several equations to extract features. The report is written using LaTex. This thumbnail is a snippet of our report",
-		
-		// Project 3
-		project3_title: "Chess-Piece Detection with YOLO",
-		project3_desc: "This is a project from Computer Vision module at THD. We implemented YOLOv8 to localize and classify chess pieces. This model can detect chess pieces. The detected class is displayed alongside the confidence level on the label. This project could be run on a video stream & also webcam compatible.",
-		
-		// Project 4
-		project4_title: "Brain Tumor Classifier",
-		project4_desc: "This project uses Machine Learning to classify brain Tumors on a specific dataset that provides necessary features for the model. The model is trained on a reliable dataset from kaggle. The UI provides sliders to adjust the features and the possiblity of a tumor given the adjusted values. The image from the dataset that has the closet values for the adjusted features is displayed on the UI. Necessary stats and metrics are also provided.",
-		
-		// Project 5
+
 		project5_title: "ASEAN-INDIA Hackathon (Winning Project)",
 		project5_desc: "Me and five other students formed a team and won ASEAN-INDIA International Hackathon 2021. This is an overview of our project from the Hackathon. We provided a small scale solution package for local fishermen. My tasks on this Hackathon are the data analysis and visualization parts, as well as dealing with ArcGIS to provide end users with interactive maps.",
-		
-		// Project 6
-		project6_title: "Library Assistant Chatbot",
-		project6_desc: "Günther is a chat bot designed to help with the process of finding a book from the library database of our University. This chatbot can browse through the books, suggest recommendations and provide information on the books.",
-		
-		// Project 7
+
 		project7_title: "Custom Object Detection with YOLO",
 		project7_desc: "This is a project that I did back in 2019 & early 2020 for my final year thesis at Yangon Technological University. In this project, the pre-existing YOLO object detection model is customized to be able to detect local traffic in Burma, including pedestrians in local costumes, old local buses and unique local vehicles like trishaws. The project is written entirely in .ipynb format as I had to use Google Colab for the GPU requirement for the transfer learning process.",
-		
-		// Project 9
-		project9_title: "Teaching Assistant for AI module",
-		project9_desc: "Back in 2020 December, I helped Professor Dr. Theint Theint Thu as a teaching assistant for her AI module at Yangon Technological University. The course took place entirely online due to COVID-19. There were around 80 students in the online lecture room. My main contributions were on course week three, focusing on YOLO model & unsupervised learning. I have documented lectures for my parts using notebooks and they are also published on the course website.",
-		
-		// Project 10
+
+		project1_title: "Software Agile Project Manager/Team Leader for a web-dev team of 11 students",
+		project1_desc: "This is a University project for Software Engineering module at THD. I worked as a team leader and led a team of 11 students to develop a website that displays & filters cooking recipes from a database. Pipeline used was Springboot for backend, Vue for Frontend & MongoDb for dataase (Springboot + MongoDb + Vue) & dockerized. The android part for this project is unfinished and still in mid-development stage. I mainly worked on backend team for this project. The repo in the link provided is a reupload version of the original that we hosted on Gitlab.",
+
 		project10_title: "Flood Force - Strategic Flood Management Game",
-		project10_desc: "A strategic tile-based flood management game developed for the AI in Gaming course at THD. Players protect riverside communities from flooding using infrastructure and natural solutions. Features dynamic water physics, resource management, and educational content about sustainable flood management and climate adaptation. Published on itch.io with positive player feedback on gameplay and environmental awareness."
+		project10_desc: "A strategic tile-based flood management game developed for the AI in Gaming course at THD. Players protect riverside communities from flooding using infrastructure and natural solutions. Features dynamic water physics, resource management, and educational content about sustainable flood management and climate adaptation. Published on itch.io with positive player feedback on gameplay and environmental awareness.",
+
+		project4_title: "Brain Tumor Classifier",
+		project4_desc: "This project uses Machine Learning to classify brain Tumors on a specific dataset that provides necessary features for the model. The model is trained on a reliable dataset from kaggle. The UI provides sliders to adjust the features and the possiblity of a tumor given the adjusted values. The image from the dataset that has the closet values for the adjusted features is displayed on the UI. Necessary stats and metrics are also provided.",
+
+		project2_title: "Machine Learning Model to predict Chess ELO",
+		project2_desc: "This is done as a part of ML module at THD. We researched on how to create an ELO-guessing model based on a chess games database. We came up with several equations to extract features. The report is written using LaTex. This thumbnail is a snippet of our report",
+
+		project3_title: "Chess-Piece Detection with YOLO",
+		project3_desc: "This is a project from Computer Vision module at THD. We implemented YOLOv8 to localize and classify chess pieces. This model can detect chess pieces. The detected class is displayed alongside the confidence level on the label. This project could be run on a video stream & also webcam compatible.",
+
+		project6_title: "Library Assistant Chatbot",
+		project6_desc: "Günther is a chat bot designed to help with the process of finding a book from the library database of our University. This chatbot can browse through the books, suggest recommendations and provide information on the books.",
+
+		project9_title: "Teaching Assistant for AI module",
+		project9_desc: "Back in 2020 December, I helped Professor Dr. Theint Theint Thu as a teaching assistant for her AI module at Yangon Technological University. The course took place entirely online due to COVID-19. There were around 80 students in the online lecture room. My main contributions were on course week three, focusing on YOLO model & unsupervised learning. I have documented lectures for my parts using notebooks and they are also published on the course website."
 	},
 	de: {
 		portfolio: "Mein Portfolio",
 		nav_about: "Über mich",
 		nav_projects: "Projekte",
 		nav_contact: "Kontakt",
+		achievements_banner: "500+ kalibrierte Kameras  |  3× Inferenz-Beschleunigung  |  8+ Unternehmenskunden  |  25 interaktive Lernmodule",
 		about_heading: "Über mich",
-		about_text: "Hallo, ich bin Aw Thura, ein KI/ML/Deployment-Ingenieur bei Sentics GmbH in Wolfsburg, Deutschland, mit einer Leidenschaft für die Bereitstellung von Produktions-KI-Systemen zur Lösung komplexer realer Probleme. Ich spezialisiere mich auf Computer Vision, Machine-Learning-Bereitstellung und unternehmensweite Systemintegration. In diesem Portfolio zeige ich meine professionelle Arbeit bei der Bereitstellung von Digital-Twin-Systemen, Vision-Language-Modellen und großskaligen Kameranetzwerken sowie akademische Projekte, die meine technische Grundlage demonstrieren.",
+		about_text: "Hallo, ich bin Aw Thura, ein KI/ML- & Full-Stack-Ingenieur in Wolfsburg, Deutschland. Ich habe im Februar 2026 am Deggendorf Institute of Technology (THD) mit einer Abschlussnote von 1,0 abgeschlossen. Bei Sentics GmbH setze ich Produktions-KI-Systeme ein — Digital-Twin-Kameranetzwerke, DeepStream-Pipelines und Vision-Language-Modelle — für 8+ Unternehmenskunden. In meiner Freizeit habe ich KLAR entwickelt, eine Full-Stack-Lernplattform für Algorithmen und ML, die in 3 Wochenenden von der Idee bis zur Produktion gebracht wurde. Meine Leidenschaft gilt dem gesamten Stack: von NVIDIA-DeepStream-Inferenz-Pipelines bis zu Next.js-Frontends.",
+		skills_heading: "Fähigkeiten",
+		skills_ai_title: "KI / ML",
+		skills_languages_title: "Programmiersprachen",
+		skills_web_title: "Web & Full-Stack",
+		skills_devops_title: "Tools & DevOps",
 		projects_heading: "Projekte",
+		section_professional: "Berufliche Arbeit bei Sentics GmbH",
+		section_academic: "Akademische Projekte",
 		view_project: "Projekt ansehen",
+		visit_live: "Live Demo",
+		view_source: "GitHub",
 		contact_heading: "Kontaktieren Sie mich",
 		contact_text: "Sie können mich gerne kontaktieren unter:",
 		footer_title: "Mein Data Science & KI Portfolio",
-		
-		// Project 11 - Sentics Digital Twin
+
+		project_klar_title: "KLAR — Interaktive Algorithmus- & ML-Lernplattform",
+		project_klar_desc: "Solo in 3 Wochenenden entwickelt und in Produktion gebracht. Eine Open-Source-Lernplattform mit 25 Themen (15 DSA + 10 ML) nach einem 3-Phasen-Ansatz: Mathematik → Visualisierung → Code. Live auf klar-learn.dev. Technologien: Next.js 16, React 19, TypeScript, Tailwind CSS 4, Framer Motion, KaTeX, Shiki.",
+
 		project11_title: "Digital-Twin-System-Bereitstellung bei Sentics GmbH",
 		project11_desc: "End-to-End-Bereitstellung von unternehmensweiten Digital-Twin-Systemen mit großskaligen Kameranetzwerken (8-160 Kameras) für räumliche Echtzeitintelligenz. Verantwortlich für Kamerakalibrierung, DeepStream-Pipeline-Konfiguration, KI-Modell-Bereitstellung und Produktionssystem-Wartung. Technologien: Computer Vision, NVIDIA DeepStream, RTSP-Streaming, Kafka, Produktionsüberwachung mit 24/7-Verfügbarkeit.",
-		
-		// Project 12 - Sentics Camera Calibration
+
 		project12_title: "Kameranetzwerk-Kalibrierung bei Sentics GmbH",
 		project12_desc: "Kamera-Extrinsics-Kalibrierung für großskalige Produktions-Kameranetzwerke (10-160 Kameras) an Kundenstandorten. Mit einer neuartigen Punkt-Klick-Methodik kalibriere ich Kameras, die die Grundlage für Echtzeit-Lokalisierungs- und Kartierungssysteme bilden. Beitrag zur Kalibrierungstool-Entwicklung, um den Prozess für Unternehmensbereitstellungen skalierbar zu machen.",
-		
-		// Project 13 - Sentics VLM Deployment
+
 		project13_title: "Vision-Language-Modell-Bereitstellung bei Sentics GmbH",
 		project13_desc: "Bereitstellung von Qwen2-VL auf Unternehmensservern mit Web-Dashboard für internen Zugriff. Integration des VLM in die Produktions-Lastdokumentations-Pipeline mit fixen Prompts zur JSON-Ausgabe. Koordination mit dem Dashboard-Team zur Einspeisung strukturierter Daten aus visuellen Dokumenten in Unternehmensdatenbanken. Technologien: Qwen2-VL, Python, Web-Dashboard, Server-Bereitstellung, Prompt Engineering, Datenbankintegration.",
-		
-		// Project 1
-		project1_title: "Software Agile Projektmanager/Teamleiter für ein Web-Entwicklungsteam von 11 Studenten",
-		project1_desc: "Dies ist ein Universitätsprojekt für das Software Engineering Modul an der THD. Ich arbeitete als Teamleiter und leitete ein Team von 11 Studenten bei der Entwicklung einer Website, die Kochrezepte aus einer Datenbank anzeigt und filtert. Die verwendete Pipeline war Springboot für das Backend, Vue für das Frontend und MongoDb für die Datenbank (Springboot + MongoDb + Vue) und dockerisiert. Der Android-Teil für dieses Projekt ist unvollendet und befindet sich noch in der Entwicklungsphase. Ich habe hauptsächlich im Backend-Team für dieses Projekt gearbeitet. Das Repository im bereitgestellten Link ist eine neu hochgeladene Version des Originals, das wir auf Gitlab gehostet haben.",
-		
-		// Project 2
-		project2_title: "Machine Learning Modell zur Vorhersage der Schach-ELO",
-		project2_desc: "Dies wurde als Teil des ML-Moduls an der THD durchgeführt. Wir haben erforscht, wie man ein ELO-Vorhersagemodell basierend auf einer Schachspieldatenbank erstellt. Wir haben mehrere Gleichungen entwickelt, um Merkmale zu extrahieren. Der Bericht wurde mit LaTex geschrieben. Dieses Miniaturbild ist ein Ausschnitt aus unserem Bericht.",
-		
-		// Project 3
-		project3_title: "Schachfiguren-Erkennung mit YOLO",
-		project3_desc: "Dies ist ein Projekt aus dem Computer Vision Modul an der THD. Wir haben YOLOv8 implementiert, um Schachfiguren zu lokalisieren und zu klassifizieren. Dieses Modell kann Schachfiguren erkennen. Die erkannte Klasse wird zusammen mit dem Konfidenzniveau auf dem Label angezeigt. Dieses Projekt kann auf einem Videostream ausgeführt werden und ist auch Webcam-kompatibel.",
-		
-		// Project 4
-		project4_title: "Hirntumor-Klassifikator",
-		project4_desc: "Dieses Projekt verwendet Machine Learning zur Klassifizierung von Hirntumoren auf einem spezifischen Datensatz, der notwendige Merkmale für das Modell bereitstellt. Das Modell wurde auf einem zuverlässigen Datensatz von Kaggle trainiert. Die Benutzeroberfläche bietet Schieberegler zum Anpassen der Merkmale und die Wahrscheinlichkeit eines Tumors bei den angepassten Werten. Das Bild aus dem Datensatz, das den nächsten Werten für die angepassten Merkmale hat, wird auf der Benutzeroberfläche angezeigt. Notwendige Statistiken und Metriken werden ebenfalls bereitgestellt.",
-		
-		// Project 5
+
 		project5_title: "ASEAN-INDIA Hackathon (Gewinnerprojekt)",
 		project5_desc: "Ich und fünf weitere Studenten bildeten ein Team und gewannen den ASEAN-INDIA International Hackathon 2021. Dies ist eine Übersicht über unser Projekt vom Hackathon. Wir haben ein kleines Lösungspaket für lokale Fischer bereitgestellt. Meine Aufgaben bei diesem Hackathon waren die Datenanalyse und Visualisierung sowie die Arbeit mit ArcGIS, um Endbenutzern interaktive Karten bereitzustellen.",
-		
-		// Project 6
-		project6_title: "Bibliotheksassistent-Chatbot",
-		project6_desc: "Günther ist ein Chatbot, der entwickelt wurde, um bei der Suche nach einem Buch aus der Bibliotheksdatenbank unserer Universität zu helfen. Dieser Chatbot kann durch die Bücher stöbern, Empfehlungen vorschlagen und Informationen über die Bücher bereitstellen.",
-		
-		// Project 7
+
 		project7_title: "Benutzerdefinierte Objekterkennung mit YOLO",
 		project7_desc: "Dies ist ein Projekt, das ich 2019 und Anfang 2020 für meine Abschlussarbeit an der Yangon Technological University durchgeführt habe. In diesem Projekt wurde das bereits existierende YOLO-Objekterkennungsmodell angepasst, um lokalen Verkehr in Burma zu erkennen, einschließlich Fußgängern in lokalen Kostümen, alten lokalen Bussen und einzigartigen lokalen Fahrzeugen wie Trishaws. Das Projekt ist vollständig im .ipynb-Format geschrieben, da ich Google Colab für die GPU-Anforderung des Transfer-Learning-Prozesses verwenden musste.",
-		
-		// Project 9
-		project9_title: "Lehrassistent für KI-Modul",
-		project9_desc: "Im Dezember 2020 half ich Professor Dr. Theint Theint Thu als Lehrassistent für ihr KI-Modul an der Yangon Technological University. Der Kurs fand aufgrund von COVID-19 vollständig online statt. Es gab etwa 80 Studenten im Online-Vorlesungsraum. Meine Hauptbeiträge waren in der dritten Kurswoche und konzentrierten sich auf das YOLO-Modell und unüberwachtes Lernen. Ich habe Vorlesungen für meine Teile mit Notebooks dokumentiert, und sie sind auch auf der Kurs-Website veröffentlicht.",
-		
-		// Project 10
+
+		project1_title: "Software Agile Projektmanager/Teamleiter für ein Web-Entwicklungsteam von 11 Studenten",
+		project1_desc: "Dies ist ein Universitätsprojekt für das Software Engineering Modul an der THD. Ich arbeitete als Teamleiter und leitete ein Team von 11 Studenten bei der Entwicklung einer Website, die Kochrezepte aus einer Datenbank anzeigt und filtert. Die verwendete Pipeline war Springboot für das Backend, Vue für das Frontend und MongoDb für die Datenbank (Springboot + MongoDb + Vue) und dockerisiert. Der Android-Teil für dieses Projekt ist unvollendet und befindet sich noch in der Entwicklungsphase. Ich habe hauptsächlich im Backend-Team für dieses Projekt gearbeitet. Das Repository im bereitgestellten Link ist eine neu hochgeladene Version des Originals, das wir auf Gitlab gehostet haben.",
+
 		project10_title: "Flood Force - Strategisches Hochwassermanagement-Spiel",
-		project10_desc: "Ein strategisches kachelbasiertes Hochwassermanagement-Spiel, entwickelt für den Kurs KI im Gaming an der THD. Spieler schützen Flussgemeinden vor Überschwemmungen mit Infrastruktur und natürlichen Lösungen. Bietet dynamische Wasserphysik, Ressourcenmanagement und Bildungsinhalte über nachhaltiges Hochwassermanagement und Klimaanpassung. Auf itch.io veröffentlicht mit positivem Spielerfeedback zu Gameplay und Umweltbewusstsein."
+		project10_desc: "Ein strategisches kachelbasiertes Hochwassermanagement-Spiel, entwickelt für den Kurs KI im Gaming an der THD. Spieler schützen Flussgemeinden vor Überschwemmungen mit Infrastruktur und natürlichen Lösungen. Bietet dynamische Wasserphysik, Ressourcenmanagement und Bildungsinhalte über nachhaltiges Hochwassermanagement und Klimaanpassung. Auf itch.io veröffentlicht mit positivem Spielerfeedback zu Gameplay und Umweltbewusstsein.",
+
+		project4_title: "Hirntumor-Klassifikator",
+		project4_desc: "Dieses Projekt verwendet Machine Learning zur Klassifizierung von Hirntumoren auf einem spezifischen Datensatz, der notwendige Merkmale für das Modell bereitstellt. Das Modell wurde auf einem zuverlässigen Datensatz von Kaggle trainiert. Die Benutzeroberfläche bietet Schieberegler zum Anpassen der Merkmale und die Wahrscheinlichkeit eines Tumors bei den angepassten Werten. Das Bild aus dem Datensatz, das den nächsten Werten für die angepassten Merkmale hat, wird auf der Benutzeroberfläche angezeigt. Notwendige Statistiken und Metriken werden ebenfalls bereitgestellt.",
+
+		project2_title: "Machine Learning Modell zur Vorhersage der Schach-ELO",
+		project2_desc: "Dies wurde als Teil des ML-Moduls an der THD durchgeführt. Wir haben erforscht, wie man ein ELO-Vorhersagemodell basierend auf einer Schachspieldatenbank erstellt. Wir haben mehrere Gleichungen entwickelt, um Merkmale zu extrahieren. Der Bericht wurde mit LaTex geschrieben. Dieses Miniaturbild ist ein Ausschnitt aus unserem Bericht.",
+
+		project3_title: "Schachfiguren-Erkennung mit YOLO",
+		project3_desc: "Dies ist ein Projekt aus dem Computer Vision Modul an der THD. Wir haben YOLOv8 implementiert, um Schachfiguren zu lokalisieren und zu klassifizieren. Dieses Modell kann Schachfiguren erkennen. Die erkannte Klasse wird zusammen mit dem Konfidenzniveau auf dem Label angezeigt. Dieses Projekt kann auf einem Videostream ausgeführt werden und ist auch Webcam-kompatibel.",
+
+		project6_title: "Bibliotheksassistent-Chatbot",
+		project6_desc: "Günther ist ein Chatbot, der entwickelt wurde, um bei der Suche nach einem Buch aus der Bibliotheksdatenbank unserer Universität zu helfen. Dieser Chatbot kann durch die Bücher stöbern, Empfehlungen vorschlagen und Informationen über die Bücher bereitstellen.",
+
+		project9_title: "Lehrassistent für KI-Modul",
+		project9_desc: "Im Dezember 2020 half ich Professor Dr. Theint Theint Thu als Lehrassistent für ihr KI-Modul an der Yangon Technological University. Der Kurs fand aufgrund von COVID-19 vollständig online statt. Es gab etwa 80 Studenten im Online-Vorlesungsraum. Meine Hauptbeiträge waren in der dritten Kurswoche und konzentrierten sich auf das YOLO-Modell und unüberwachtes Lernen. Ich habe Vorlesungen für meine Teile mit Notebooks dokumentiert, und sie sind auch auf der Kurs-Website veröffentlicht."
 	}
 };
 
-// Get current language from localStorage or default to 'en'
 let currentLang = localStorage.getItem('preferredLanguage') || 'en';
 
-// Function to update all translatable elements
 function updateLanguage(lang) {
-	const elements = document.querySelectorAll('[data-translate]');
-	elements.forEach(element => {
+	document.querySelectorAll('[data-translate]').forEach(element => {
 		const key = element.getAttribute('data-translate');
 		if (translations[lang][key]) {
 			element.textContent = translations[lang][key];
 		}
 	});
-	
-	// Update language button
-	const langIcon = document.getElementById('langIcon');
-	if (lang === 'en') {
-		langIcon.textContent = '🇩🇪 DE';
-	} else {
-		langIcon.textContent = '🇬🇧 EN';
-	}
-	
-	// Save preference
+	document.getElementById('langIcon').textContent = lang === 'en' ? '🇩🇪 DE' : '🇬🇧 EN';
 	localStorage.setItem('preferredLanguage', lang);
 	currentLang = lang;
 }
 
-// Toggle language function
 function toggleLanguage() {
-	const newLang = currentLang === 'en' ? 'de' : 'en';
-	updateLanguage(newLang);
+	updateLanguage(currentLang === 'en' ? 'de' : 'en');
 }
 
-// Initialize with saved or default language on page load
 document.addEventListener('DOMContentLoaded', function() {
 	updateLanguage(currentLang);
 });
